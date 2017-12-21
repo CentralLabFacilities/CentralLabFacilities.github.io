@@ -299,12 +299,9 @@ Voila, you're all set.
 
 # Subjects
 
-TODO: Add protocol
+Subjects were recruited via advertisements that were spread at the nearby campus. The advertisment informed that we invite people over 18 years to participate in a co-operational study for about 45min and that participation would be reimbursed with 8€. Not to bias participants, the robot was nor mentioned neither illustrated in the advertisment. Although most students are familiar with CITEC-related research and might have anticipated that the study is somehow related to robots.
 
-The subjects were recruited by paper sheet advertisement at the nearby campus. On the paper, it said that we were looking 
-for people who wanted to participate in a co-operational study and that it takes about 45min and pays 8 EUR. 
-The robot was not mentioned and not illustrated. The location of the experiment (CITEC) might (for some) indicate 
-something robots-related. 
+## Procedure
 
 When they arrived, each participant was welcomed and led to the room were the study took place, an ordinary office with a 
 symmetrical setup (two setups [NAO, Monitor, 2 keyboards]) on either side. The participants were asked to sit down and 
