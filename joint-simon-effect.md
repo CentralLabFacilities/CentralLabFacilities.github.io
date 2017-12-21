@@ -303,18 +303,25 @@ Subjects were recruited via advertisements that were spread at the nearby campus
 
 ## Procedure
 
-When they arrived, each participant was welcomed and led to the room were the study took place, an ordinary office with a 
-symmetrical setup (two setups [NAO, Monitor, 2 keyboards]) on either side. The participants were asked to sit down and 
-turn off their phones or set it to flight mode. The robot was introduced as also participating in the study but without 
-further description or details. The participants were told that all the details will be displayed on-screen. 
+The experiment consisted of two parts. Firstly, participants did an interactive task with NAO robot. Secondly, they completed a survey.
+
+Firstly, each participant was welcomed and led to the room were the study took place, an ordinary office with a 
+symmetrical setup (two setups [NAO, Monitor, 2 keyboards]) on either side. Participants were asked to take seat and to
+turn off their mobile phone or set it to flight mode. The robot was introduced as if it was just another robotic participant, but without further description or details. Participants were told that the study instructions would be displayed on-screen. 
 As described in the previous step, the study was initiated by the operator during the first setup slides.
 
-This results in the robot's motors being turned on and stiffened. The robots hand next to the participants now should move to the initial position over to the 
-space bar to introduce the robot's ability to move to the participant. The participants were asked to follow the instructions on screen and 
-that if they had any questions or something went wrong they could just come next door where the operator was waiting.
+This resulted in the robot's motors being turned on and stiffened. The robot's hand next to the participant moved to the initial position over to the space bar to introduce the robot's ability to move to the participant. Participants were asked to follow the instructions on the screen and to contact the experimenter in case they had questions or if the experiment was done.
 
-After the experiment, the participants received a full disclosure about what the study was really about and any further 
+After doing the interactive task, participants were told to contact the experimenter next door and to complete the survey (see script). To do so, participants were seated on a pc next door and completed an online-survey in Unipark.
+
+After the experiment, participants received a full disclosure about what the study was really about and any further 
 questions answered. 
+
+## Preparation
+
+Participants should be pseudo-randomized to each condition. That means, it is important to have equal numbers of participants who sit left and light to the robot as well as equal numbers of male and female participants.
+
+To assign participants to each condition, the experimenter should prepare lists that document the participant number, condition, participant's gender, and comments to report whether everything went well or whether there were any issues. For instance, technical issuues, or participant- or experimenter-related issues. If there are different experimenters, it should be documented who tested which participant.
 
 # Results
 
