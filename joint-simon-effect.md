@@ -299,6 +299,8 @@ Voila, you're all set.
 
 # Subjects
 
+TODO: Add protocol
+
 The subjects were recruited by paper sheet advertisement at the nearby campus. On the paper, it said that we were looking 
 for people who wanted to participate in a co-operational study and that it takes about 45min and pays 8 EUR. 
 The robot was not mentioned and not illustrated. The location of the experiment (CITEC) might (for some) indicate 
