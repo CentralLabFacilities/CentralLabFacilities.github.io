@@ -132,11 +132,12 @@ is done in a web browser (e.g., experiment execution and orchestration) please u
 
 ## Step 3: Deploying the Software Infrastructure for the Experiment
 
-###  Bootstrapping the CITK
+###  Step 3a: Bootstrapping the CITK
 
 We are using the CITK [4] to bootstrap your software experiment environment. This is how it is bootstrapped.
 
-First of all you will need to install the following dependencies in order to run CITK tools. Open a Terminal and run:
+First of all you will need to install the following dependencies in order to run CITK tools. Open a Terminal and run the
+command below. Note: make sure you always copy the complete line!
 
 <pre>
 sudo apt-get install openjdk-8-jdk curl python2.7 python2.7-dev python-setuptools git subversion maven build-essential build-essential cmake
@@ -181,7 +182,7 @@ Please login (top right corner) using the credentials you chose when executing t
 
 ![empty_jenkins](https://toolkit.cit-ec.uni-bielefeld.de/sites/toolkit.cit-ec.uni-bielefeld.de/files/tutorial_jenkins_new.jpg)
 
-### Generate Distribution and Deploy
+### Step 3b: Generate Distribution and Deploy
 
 We are now going to the install all required software components for you. This includes the software
 that is required in order to control the robot, as well as experiment execution and data acquisition. Yay!
@@ -194,8 +195,8 @@ git clone https://opensource.cit-ec.de/git/citk .
 git checkout d6bc5c98cec80aec28cc
 </pre>
 
-In the next step please substitute "{YOUR_USERNAME}" and {YOUR_PASSWORD} with the credentials in
-the "./create_user" (see section above) step and execute the command line below.
+In the next step please substitute "{YOUR_USERNAME}" and "{YOUR_PASSWORD}" with the credentials in
+the "./create_user" step and execute the command line below.
 
 <pre>
 $HOME/citk/jenkins/job-configurator --on-error=continue -d $HOME/citk/dist/distributions/remotelab-nightly.distribution -m toolkit -D toolkit.volume=$HOME/citk/systems -u {YOUR_USERNAME} -a {YOUR_PASSWORD}
@@ -248,15 +249,18 @@ In order to get back to the overview page, simply click the top left Jenkins ico
 
 ![jenkins_trigger](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/trigger_job.png)
 
-Our toolchain will now install all required software components for you **automagically**. When it's done
-(this can take up to 10 minutes) all, except for two, jobs in your Jenkins instance should turn from grey
-(haven't been built yet) to blue (successfully installed). You only need to install the system **once**.
+Our toolchain will now install all required software components for you **automagically**. 
+
+When it's done (this can take up to 10 minutes) all, except for two, jobs in your Jenkins instance should turn from grey
+(haven't been built yet) to blue (successfully installed). 
+
+NOTE: You only need to install the system **once**.
 
 There will be  **TWO** "grey" jobs: "runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly" and
 "runnable-remotelab-jsp-nao-calibration-master-runnable-toolkit-remotelab-nightly" (the latter is missing in the image below,
 don't worry...).
 
-These jobs will be used later on to actually calibrate the robot and **RUN** your experiment.
+These jobs will be used later on to a) actually calibrate the robot and b) **RUN** your experiment!
 
 How cool is that?
 
