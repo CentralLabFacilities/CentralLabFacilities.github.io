@@ -293,9 +293,7 @@ During calibration, the robot's stiffness **needs to be released**. If the motor
 
 It is assumed that the robot is powered on and already connected to the network as described in Step 1.
 Assuming you set up the experiment exactly as described above you should check the robot's IP one last time. You can do this
-by pressing the chest button, the robot will tell you its IP. Remember the address, e.g., 192.168.1.30. 
-
-You will **need it** in the next steps. 
+by pressing the chest button, the robot will tell you its IP. Remember the address, e.g., 192.168.1.30. Write it down, you will **need it** in the next steps. 
 
 During the calibration procedure the arm postures for the key press movement (left and right side), needed in
 the experiment, will be recorded and saved.
@@ -390,7 +388,7 @@ TODO: is the gender really important for the JSE? It is important to note the ge
 not really possible to have an equal number of female and male subjects since they are recruited by advertisement.
 
 To do so, it was important to document how many participants were assigned to each condition and whether they were male 
-and female. That's why <b/>lists were prepared in advance</b> to document participant number, condition, participant's 
+and female. That's why **lists were prepared in advance** to document participant number, condition, participant's 
 gender, experimenter's name, and further comments to report whether everything went well or whether there were any difficulties. 
 For instance, technical issues  or participant- or experimenter-related issues. <b/> The assignment of participants to the 
 experimental conditions and the documentation of the course of the study is very important. Please prepare in advance! </b>
