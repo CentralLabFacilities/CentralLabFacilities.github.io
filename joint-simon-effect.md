@@ -365,10 +365,9 @@ return to its initial state (new subject).
 The job will keep running until you **explicitly** stop it using the "[x]" button next to the running job (see Build Queue),
 you shut down the Jenkins, you shut down the laptop, or after a maximum of 24 hrs. 
 
-When you're done for the day, you **may** shut down everything (if you want to). When you continue the next day,
-you just need to 
+When you're done for the day, you **may** shut down everything. When you continue the next day, you just need to: 
 
-- a) setup the NAO (if it has been moved) 
+- a) physically setup the NAO (if it has been moved) 
 - b) start the Jenkins using the "./start_jenkins" script like you have done it before
 - c) trigger the "runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly"
 
