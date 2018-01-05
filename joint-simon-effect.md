@@ -363,7 +363,7 @@ In general, you don't need to re-run the experiment build job *per participant*.
 return to its initial state (new subject).
 
 The job will keep running until you **explicitly** stop it using the "[x]" button next to the running job (see Build Queue),
-you shut/exit down the Jenkins, you shut down the laptop, or after a maximum of 24 hrs. 
+you shut down the Jenkins, you shut down the laptop, or after a maximum of 24 hrs. 
 
 When you're done for the day, you **may** shut down everything (if you want to). When you continue the next day,
 you just need to 
