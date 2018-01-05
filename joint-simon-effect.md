@@ -325,7 +325,7 @@ Great, you are done! Now you can run the experiment.
 ## Step 6: Executing the Experiment
 
 It is assumed that you either just calibrated the robot or, if you continue the experiment another day,
-set up the Nao exactly like the last time you calibrated.
+set up the Nao exactly like the last time you calibrated (remember: use e.g. tape to mark the robots postion).
 
 Switch to the Jenkins in your browser (you need to be logged in) https://localhost:8080/?auto_refresh=true.
 Trigger the job "runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly" (stopwatch icon), 
@@ -381,7 +381,7 @@ experimental conditions and the documentation of the course of the study is very
 
 Below you can find an example of a possible documentation and list you can prepare.
 
-| Position      | Gender        | ID    | Comment    |
+| Position      | Gender        | UID   | Comment    |
 | ------------- |:-------------:| :----:| ----------:|
 | left          | male          | abc1  | none       | 
 | right         | female        | bcd3  | seems tired|
