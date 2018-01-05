@@ -47,36 +47,40 @@ without explicit belief manipulation of the subjects (cf. [2] "biologically insp
 
 In case you a not familiar with setting up a network, it might be helpful to ask 
 someone in your lab who is experienced to help you setting it up. However, this is
-a relatively easy task and hopefully well-described here.
+a relatively easy task and hopefully well explained here.
 
 Any recent standard NAO robot platform (acquired within the last 2-3 years) should suffice. 
 The software interface to the robot is downward compatible to NAOQi 1.x.x in this experiment.
 
-Furthermore, a recent desktop PC or laptop is required. The PC/laptop initially requires an
-internet connection for our automated software installation, running the experiment does not 
+Furthermore, a recent desktop PC or laptop is required. The PC/laptop requires an
+internet connection for our automated software installation &mdash; running the experiment does not 
 require internet access.
 
 At least two cpu cores, and 2 GB Ram (4 GB recommended) should suffice. Additionally, 
-it is required that the robot and the laptop/PC are connected to the same network (subnet). 
+it is required that the robot and the laptop/PC are connected to the same network. 
 
 We also strongly recommend a **wired** network connection for both, the robot 
-and the laptop, you will need two calbes. If there is absolutely no chance of establishing 
-a wired connection, WiFi will also work. However, since WiFi usually introduces a higher 
-latency and instability than a wired connection, we disadvise using it.
+and the laptop, you will need two cables. If there is absolutely no chance of establishing 
+a wired connection, WiFi will also work. 
 
-In order to check if the laptop/PC 'can talk to' the robot, simply plug a network cable
+However, since WiFi usually introduces a higher latency and instability than a wired connection, 
+we disadvise using it.
+
+In order to test if the laptop/PC 'can talk to' the robot, simply plug a network cable
 into the NAO (back of the head, open the service hatch first). Startup the laptop and connect
-it to the same network, either via router or your local network infrastructure. As soon as the laptop 
-is up and running, press the robot's chest button (single long press) to initiate the boot sequence. 
+it to the **same** network, either via router or your local network infrastructure. 
 
-This will take a few minutes. When the NAO is ready (startup jingle is over) 
+As soon as the laptop is up and running, press the robot's chest button (single long press) 
+to initiate the boot sequence. This will take a few minutes. When the NAO is ready (startup jingle is over) 
 press the chest button of the robot again (single short press). The robot will tell you
-its IP address. On the laptop/PC you can now ping the robot's IP, check if you get a "pong". 
+its IP address. 
+
+On the laptop/PC you can now ping the robot's IP, check if you get a "pong". 
 It is also recommended to leave the power cord of the robot plugged during the experiment.
 
 An example of the network setup is depicted below. Version A depicts a setup using
 a dedicated router, Version B depicts a setup that uses the existing local network infrastructure, 
-e.g., in your laboratory.
+e.g., in your laboratory or office.
 
 <img hspace="20" src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/network_setup_robot.png" width=630px>
 
@@ -92,26 +96,27 @@ ping ROBOT_IP
 The monitors used to present the stimuli to the robot and the subject (at Bielefeld University) was a 24-inch 
 Dell U2412M with an 16:10 IPS panel and a resolution of 1920:1200 @ 60 Hz. The refresh rate of this type is 
 8ms (gray to gray). The brightness was set to 100% (for this display type: 300 cd/m²). For this study, it is
-important to have the same resolution, i.e. 1920:1200 at a display size of 24 inches.
+important to have the same resolution, i.e., 1920:1200 and a display size of 24 inches.
 
-The exact physical setup will be described later. These are just the prerequisites you need to check.
+The exact physical setup will be described later. These are just the prerequisites you need to check/test first.
 
 ## Step 2: Software Requirements and Prerequisites
 
 In general, the software for this experiment has been designed and tested on Ubuntu Linux (16.04). **That's a prerequisite**. 
 
-In case you a not familiar with *nix operating systems, it might be helpful to ask 
-someone in your lab who is experienced to help you setting up the infrastructure. If you have basic knowledge 
-about *nix operating systems, the next steps will be a "piece of cake".
+In case you a not familiar with Unix-like operating systems, it might be helpful to ask 
+someone in your lab who is experienced, to help you setting up the infrastructure. If you have basic knowledge 
+about Unix-like operating systems, the next steps will be a "piece of cake".
  
 Download Ubuntu 16.04: https://www.ubuntu.com/download/desktop/contribute?version=16.04.3&architecture=amd64 
-and install it on the laptop/PC. Please note: do **not** use the Ubuntu Live Version ("Try Ubuntu" in the installer)
-, please **select** "Install Ubuntu" and proceed as explained in the Ubuntu installer routine. 
+and install it on the experiment laptop/PC. Please note: do **not** use the Ubuntu Live Version ("Try Ubuntu" in the installer)
+, please **select** "Install Ubuntu" and proceed as explained in the Ubuntu installation routine. 
 
-If you already have a machine with Ubuntu 16.04 installed that meets the requirements, check if you have sudo permissions, 
+If you already have a machine with Ubuntu 16.04 installed, that meets the requirements, check if you have sudo permissions, 
 you will need them in the following steps.
 
-Before proceeding, please execute this in a terminal in order to get your system up to date.
+Before proceeding installing the experiment software environment, please execute this in a terminal in order 
+to get your system up-to-date.
 
 <pre>
 sudo apt update && sudo apt upgrade
@@ -127,7 +132,7 @@ sudo apt upgrade
 </pre>
 
 When the update process is finished, please proceed. Note: since almost everything in this experiment
-is done in a web browser (e.g., experiment execution and orchestration) please use the
+is done in a web browser (e.g. experiment execution and orchestration) please use the
 **Firefox** web browser that is shipped with Ubuntu &mdash; we verified every feature works with Firefox.
 
 ## Step 3: Deploying the Software Infrastructure for the Experiment
@@ -136,8 +141,8 @@ is done in a web browser (e.g., experiment execution and orchestration) please u
 
 We are using the CITK [4] to bootstrap your software experiment environment. This is how it is bootstrapped.
 
-First of all you will need to install the following dependencies in order to run CITK tools. Open a Terminal and run the
-command below. Note: make sure you always copy the complete line!
+First of all you will need to install the following dependencies in order to run CITK tools. Open a terminal and run the
+command below. Note: make sure you always copy the **complete line**!
 
 <pre>
 sudo apt-get install openjdk-8-jdk curl python2.7 python2.7-dev python-setuptools git subversion maven build-essential build-essential cmake
@@ -157,14 +162,14 @@ tar -xzvf jenkins-jse.tar.gz
 cd jenkins
 </pre>
 
-Once extraction is completed, you need to configure a new user for Jenkins (can be skipped when upgrading from a previous release).
+Once the extraction is done, you need to configure a new user for Jenkins.
 Please **remember** the user and password, you will need it later!
 
 <pre>
 ./create_user.sh
 </pre>
 
-Provide the required instructions in the terminal. Afterwards, Jenkins can be started.
+Follow the required instructions in the terminal. Afterwards, Jenkins can be started as follows.
 
 <pre>
 ./start_jenkins
@@ -172,18 +177,13 @@ Provide the required instructions in the terminal. Afterwards, Jenkins can be st
 
 Now, you may open the Jenkins Dashboard at https://localhost:8080/?auto_refresh=true in your Browser.
 
-Login using the credentials you chose in the previous "./create_user" step.
-
-You should see something similar to the picture below.
-
-Please login (top right corner) using the credentials you chose when executing the "./create_user" step.
-**Don't** close the terminal in which your Jenkins is running. You are all set for now.
+You should see something similar to the picture below. Please login (top right corner) using the credentials you chose when executing the "./create_user" step. **Don't** close the terminal in which your Jenkins is running. You are all set for now!
 
 ![empty_jenkins](https://toolkit.cit-ec.uni-bielefeld.de/sites/toolkit.cit-ec.uni-bielefeld.de/files/tutorial_jenkins_new.jpg)
 
 ### Step 3b: Generate Distribution and Deploy
 
-We are now going to the install all required software components for you. This includes the software
+We are now going to the install all required software components. This includes the software
 that is required in order to control the robot, as well as experiment execution and data acquisition. Yay!
 
 Please open a new terminal and execute the following steps.
@@ -194,14 +194,14 @@ git clone https://opensource.cit-ec.de/git/citk .
 git checkout d6bc5c98cec80aec28cc
 </pre>
 
-In the next step please substitute "{YOUR_USERNAME}" and "{YOUR_PASSWORD}" with the credentials in
+In the next step please substitute "{YOUR_USERNAME}" and "{YOUR_PASSWORD}" with the credentials you chose in
 the "./create_user" step and execute the command line below.
 
 <pre>
 $HOME/citk/jenkins/job-configurator --on-error=continue -d $HOME/citk/dist/distributions/remotelab-nightly.distribution -m toolkit -D toolkit.volume=$HOME/citk/systems -u {YOUR_USERNAME} -a {YOUR_PASSWORD}
 </pre>
 
-Now, there are two things to check:
+There are two things to check now:
 
 **A)** You should see the following at the end of the console output
 
@@ -217,8 +217,8 @@ END   LIST-CREDENTIALS, 0.000 seconds
 100.00 % JOBS
 </pre>
 
-**B)** Please also check the console output for the following (you might need to scroll up a little). 
-If you don't see "missing platform dependency" you are all set.
+**B)** Please also check the console output for the following (you might need to scroll-up a little). 
+If you **don't** see "missing platform dependency" (see below) you are all set.
 
 <pre>
   10 missing platform dependencies:
@@ -229,11 +229,10 @@ If missing dependencies are reported you **need to** install them using:
 
 <pre>
 sudo apt-get install [list of reported packages]
-E.g.: sudo apt-get install python-requests python-sphinx wmctrl libssl-dev libffi-dev libzmq-dev libxml2-dev libxslt1-dev zlib1g-dev python-tk
+e.g. sudo apt-get install python-requests python-sphinx wmctrl libssl-dev libffi-dev libzmq-dev libxml2-dev libxslt1-dev zlib1g-dev python-tk
 </pre>
 
-Hint: You can safely ignore other warnings (other mentioned problems). 
-In the unlikely case something is wrong in general &mdash; please contact us.
+Hint: You can safely ignore other warnings (other mentioned problems). In the unlikely case something is wrong in general &mdash; please contact us.
 
 Now, go back to your browser: https://localhost:8080/?auto_refresh=true  You should see something similar to this:
  
