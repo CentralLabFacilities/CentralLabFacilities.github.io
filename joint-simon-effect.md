@@ -129,12 +129,25 @@ When the update process is finished, please proceed. Note: since almost everythi
 is done in a web browser (e.g., experiment execution and orchestration) please use the
 **Firefox** web browser that is shipped with Ubuntu &mdash; we verified every feature works with Firefox.
 
-# Step 3: Deploying the Software Infrastructure for the Experiment
+## Step 3: Deploying the Software Infrastructure for the Experiment
 
-## Bootstrapping the CITK
+###  Bootstrapping the CITK
 
-We are using the CITK [4] to bootstrap your software experiment environment, please follow https://toolkit.cit-ec.uni-bielefeld.de/tutorials/bootstrapping
-tutorial (you might need to accept a SSL certificate when accessing the referenced web site, the browser might warn you).
+We are using the CITK [4] to bootstrap your software experiment environment. This is how it is bootstrapped.
+
+First of all you will need to install the following dependencies in order to run CITK tools. Open a Terminal and run:
+
+<pre>
+sudo apt-get install openjdk-8-jdk curl python2.7 python2.7-dev python-setuptools git subversion maven build-essential build-essential cmake
+</pre>
+
+Download the jenkins-jse.tar.gz. In the remainder of this tutorial we will work with ~/citk/ as your install $prefix.
+
+<pre>
+mkdir -p $HOME/citk/ && cd $HOME/citk/
+wget --no-check-certificate https://ci.toolkit.cit-ec.de/job/jenkins-distribution/lastStableBuild/artifact/jenkins.tar.gz -O jenkins.tar.gz
+</pre>
+
 
 **Stop** after "Step #3: Expected Result", do **not** proceed to the next tutorial mentioned on the web site
 (Installing a Distribution). In general, you will need to execute the steps in the grey boxes in a terminal.
@@ -147,7 +160,7 @@ Please login (top right corner) using the credentials you chose when executing t
 
 ![empty_jenkins](https://toolkit.cit-ec.uni-bielefeld.de/sites/toolkit.cit-ec.uni-bielefeld.de/files/tutorial_jenkins_new.jpg)
 
-## Generate Distribution and Deploy
+### Generate Distribution and Deploy
 
 We are now going to the install all required software components for you. This includes the software
 that is required in order to control the robot, as well as experiment execution and data acquisition. Yay!
@@ -229,7 +242,7 @@ Leave this for now, we will now setup the physical parts.
 
 ![jenkins_trigger](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/remote-lab-done.png)
 
-# Physical Experiment Setup
+## Step 4: Physical Experiment Setup
 
 Because two NAOS were available at Bielefeld, a symmetrical setup was installed in an otherwise empty office.
 The two monitors were connected to the same workstation. The displays were set to mirror mode, showing the same image.
@@ -251,7 +264,7 @@ using a calibration program that will be introduced later. Calibration is necess
 differences in positioning at the institutions and the angles of the NAO's motors might deviate from robot to robot.
 The robot's head is turned towards the screen to indicate that the robot is looking at it.
 
-# Calibration procedure
+## Step 5: Calibration procedure
 
 **During calibration, the robot's stiffness needs to be released. If the motors are stiff, release stiffness with
 two short chest button presses.**
@@ -285,7 +298,7 @@ second time for right arm).
 
 Great, you are done! Now you can run the experiment.
 
-# Executing the Experiment
+## Step 6: Executing the Experiment
 
 It is assumed that you either just calibrated the robot or (if you continue the experiment on another day)
 set up the Nao exactly like the last time you calibrated.
