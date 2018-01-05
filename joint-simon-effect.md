@@ -343,7 +343,7 @@ Trigger the job ...
 
 **"runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly**" (stopwatch icon) 
 
-... and enter the IP and port of the robot in the small popup window and confirm the dialog.
+... and enter the IP and port (default: 9559) of the robot in the small popup window and confirm the dialog.
 
 Now, in another browser (Firefox) window or a new browser tab enter the following address into the address bar: 
 
@@ -352,19 +352,25 @@ Now, in another browser (Firefox) window or a new browser tab enter the followin
 You should see the first experiment setup slide! You don't need to enter anything on this slide. Just click "submit answers".
 
 On the next slide, you have to choose on which side the robot is kneeling. Choose right or left and &mdash; congratulations &mdash;
-the setup is done! The robot should stiffen and move the correct arm towards the keyboard. This should be done before
+the setup is done! 
+
+The robot should stiffen and move the correct arm towards the keyboard. This should be done before
 the subject enters the room or sees the robot.
 
 Now, you can get the subject and start the experiment! Again, the subject should not be present during the setup of the robot.
 
-In general, you don't need to re-run the "runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly"
-job *per participant*. After each trial the browser window will return to its initial state (new subject).
+In general, you don't need to re-run the experiment build job *per participant*. After each trial the browser window will 
+return to its initial state (new subject).
 
-The job will keep running until you **explicitly** stop it using the "[x]" button next to the running job (Build Queue).
+The job will keep running until you **explicitly** stop it using the "[x]" button next to the running job (see Build Queue),
+you shut/exit down the Jenkins, you shut down the laptop, or after a maximum of 24 hrs. 
 
 When you're done for the day, you **may** shut down everything (if you want to). When you continue the next day,
-you just need to setup the NAO (if it has been moved), start the Jenkins using the "./start_jenkins" script like
-you have done it before and trigger the "runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly"
+you just need to 
+
+- a) setup the NAO (if it has been moved) 
+- b) start the Jenkins using the "./start_jenkins" script like you have done it before
+- c) trigger the "runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly"
 
 Voila, you're all set again.
 
