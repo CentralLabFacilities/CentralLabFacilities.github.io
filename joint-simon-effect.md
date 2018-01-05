@@ -16,13 +16,13 @@
 
 This experiment is a reproduction of the "Joint Simon effects for non-human co-actors" experiment 
 by Stenzel et al. [1] which has also been further reviewed in [2]. In order to reproduce our experiment, 
-please read this guideline carefully and execute the mentioned steps in the correct order. 
+please read this **guideline carefully** and execute the mentioned steps in the **correct** order. 
 The theoretical background is described in the referenced literature.
 
 In this particular study however, we pursue a twofold goal. 
 
 A) we investigate how software intensive robotics experiments can be deployed and executed 
-automatically (the software part) by any interested researcher. Why?
+automatically (the software part) by **any** interested researcher. Why?
 
 > The insufficient level of reproducibility of published experimental results has been identified 
 as a core issue in the field of robotics in recent years. Why is that? First of
@@ -40,33 +40,34 @@ execution, and d) reproducible evaluation of obtained experiment data. The ultim
 collaboration is to reproduce the same experiment in two different laboratories using the same 
 systematic approach. [3]
 
-B) We investigate if we can observe a JSE using a physiologically different robot (from Stenzel's) 
+B) We investigate if we can observe a JSE using a physiologically different robot (from Stenzel's experiment) 
 without explicit belief manipulation of the subjects (cf. [2] "biologically inspired" vs. "machine like" robot).
 
-## Hardware Requirements and Prerequisites
+## Step 1: Hardware Requirements and Prerequisites
 
 Any recent standard NAO robot platform (acquired within the last 2-3 years) should suffice. 
 The software interface to the robot is downward compatible to NAOQi 1.x.x in this experiment.
 
 Furthermore, a recent desktop PC or laptop is required. The PC/laptop initially requires an
-internet connection for our automated software installation, running the experiment does not require internet access.
+internet connection for our automated software installation, running the experiment does not 
+require internet access.
 
 At least two cpu cores, and 2 GB Ram (4 GB recommended) should suffice. Additionally, 
 it is required that the robot and the laptop/PC are connected to the same network (subnet). 
 
-We also strongly recommend a wired network connection for both, the robot 
+We also strongly recommend a **wired** network connection for both, the robot 
 and the laptop. If there is absolutely no chance of establishing a wired connection, 
 WiFi will also work. However, since WiFi usually introduces a higher 
 latency and instability than a wired connection, we disadvise using it.
 
 In order to check if the laptop/PC 'can talk to' the robot, simply plug a network cable
-into the NAO (back of the head, open the service hatch first). Startup the laptop connected to
-the robot. As soon as the laptop is up and running, press the robot's chest button (single long press) 
-to initiate the boot sequence. This will take a few minutes. When the NAO is ready (startup jingle is over) 
+into the NAO (back of the head, open the service hatch first). Startup the laptop and connect
+it to the same network, either via router or your local network infrastructure. As soon as the laptop 
+is up and running, press the robot's chest button (single long press) to initiate the boot sequence. 
+This will take a few minutes. When the NAO is ready (startup jingle is over) 
 press the chest button of the robot again (single short press). The robot will tell you
 its IP address. On the laptop/PC you can now ping the robot's IP, check if you get a "pong". 
 It is also recommended to leave the power cord of the robot plugged during the experiment.
-This is however not mandatory.
 
 <pre>
 ping ROBOT_IP
@@ -77,9 +78,10 @@ ping ROBOT_IP
 
 The monitors used to present the stimuli to the robot and the subject (at Bielefeld University) was a 24-inch 
 Dell U2412M with an 16:10 IPS panel and a resolution of 1920:1200 @ 60 Hz. The refresh rate of this type is 
-8ms (gray to gray). The brightness was set to 100% (for this display type: 300 cd/m²). 
+8ms (gray to gray). The brightness was set to 100% (for this display type: 300 cd/m²). For this study, it is
+important to have the same resolution, i.e. 1920:1200 at a display size of 24 inches.
 
-The exact physical setup will be described later. These are just the requirements.
+The exact physical setup will be described later. These are just the prerequisites you need to check.
 
 ## Software Requirements and Prerequisites
 
