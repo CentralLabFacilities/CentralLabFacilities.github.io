@@ -297,27 +297,31 @@ you have done it before and trigger the "runnable-remotelab-nao-physical-demo-ma
 
 Voila, you're all set.
 
-# Subjects
+## Subjects
 
-Subjects were recruited via advertisements that were spread at the nearby campus. The advertisment informed that we invite people over 18 years to participate in a co-operational study for about 45min and that participation would be reimbursed with 8€. Not to bias participants, the robot was nor mentioned neither illustrated in the advertisment. Although most students were familiar with CITEC-related research and might have anticipated that the study was somehow related to robots.
+Subjects were recruited via advertisements that were spread at the nearby campus. The advertisment informed that we invited people over 18 years to participate in a co-operational study for about 45min and that participation would be reimbursed with 8€. Not to bias participants, the robot was nor mentioned neither illustrated in the advertisment. Although most students were familiar with CITEC-related research and might have anticipated that the study was somehow related to robots.
+
+## Assignment to experimental conditions and documentation
+
+It was important that equal numbers of participants in total and of males and females were tested per condition. Therefore, the experimenter assigned participants to each condition (whether participants sat left vs. right to the robot) before participants entered the experimental setup!
+
+To do so, it was important to document how many participants were assigned to each condition and whether they were male and female. That's why <b/>lists were prepared in advance</b> to document participant number, condition, participant's gender, experimenter, and further comments to report whether everything went well or whether there were any difficulties. For instance, technical issuues  or participant- or experimenter-related issues. <b/> The assignment of participants to the experimental conditions and the documentation of the course of the study is very important. Please prepare in advance! </b>
 
 ## Procedure
 
 The experiment consisted of two parts. Firstly, participants did an interactive task with NAO robot. Secondly, they completed a survey.
 
-Firstly, each participant was welcomed and led to the room where the study took place, an ordinary office with a 
+Firstly, each participant was welcomed to the room where the study took place, an ordinary office with a 
 symmetrical setup (two setups [NAO, Monitor, 2 keyboards]) on either side (see picture below).
 
 <pre>
-Experimental setting 
+Experimental setup 
 </pre>
 
 <img align="center" hspace="20" img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/Lab%202.0.jpg" width=300px>
 
 
-Participants were asked to take seat and to
-turn off their mobile phone or set it to flight mode. The robot was introduced as if it was just another robotic participant, but without further description or details. Participants were told that the study instructions would be displayed on-screen. 
-As described in the previous step, the study was initiated by the operator during the first setup slides.
+Participants were asked to take seat and to turn off their mobile phone or set it to flight mode. The robot was introduced as if it was just another robotic participant, but without further description or details. Participants were told that the study instructions would be displayed on-screen. As described in the previous step, the study was initiated by the operator during the first setup slides.
 
 This resulted in the robot's motors being turned on and stiffened. The robot's hand next to the participant moved to the initial position over to the space bar to introduce the robot's ability to move to the participant. Participants were asked to follow the instructions on the screen and to contact the experimenter in case they had questions or if the experiment was done.
 
@@ -325,12 +329,6 @@ After doing the interactive task, participants were told to contact the experime
 
 After the experiment, participants received a full disclosure about what the study was really about and any further 
 questions answered. 
-
-## Preparation
-
-Participants should be pseudo-randomized to each condition. That means, it is important to have equal numbers of participants who sit left and light to the robot as well as equal numbers of male and female participants.
-
-To assign participants to each condition, the experimenter should prepare lists that document the participant number, condition, participant's gender, and comments to report whether everything went well or whether there were any issues. For instance, technical issuues, or participant- or experimenter-related issues. If there are different experimenters, it should be documented who tested which participant.
 
 # Results
 
