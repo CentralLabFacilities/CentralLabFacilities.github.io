@@ -305,14 +305,14 @@ Subjects were recruited via advertisements that were spread at the nearby campus
 
 It was important that equal numbers of participants in total and of males and females were tested per condition. Therefore, the experimenter assigned participants to each condition (whether participants sat left vs. right to the robot) before participants entered the experimental setup!
 
-To do so, it was important to document how many participants were assigned to each condition and whether they were male and female. That's why <b/>lists were prepared in advance</b> to document participant number, condition, participant's gender, experimenter, and further comments to report whether everything went well or whether there were any difficulties. For instance, technical issuues  or participant- or experimenter-related issues. <b/> The assignment of participants to the experimental conditions and the documentation of the course of the study is very important. Please prepare in advance! </b>
+To do so, it was important to document how many participants were assigned to each condition and whether they were male and female. That's why <b/>lists were prepared in advance</b> to document participant number, condition, participant's gender, experimenter's name, and further comments to report whether everything went well or whether there were any difficulties. For instance, technical issuues  or participant- or experimenter-related issues. <b/> The assignment of participants to the experimental conditions and the documentation of the course of the study is very important. Please prepare in advance! </b>
 
 ## Procedure
 
 The experiment consisted of two parts. Firstly, participants did an interactive task with NAO robot. Secondly, they completed a survey.
 
 Firstly, each participant was welcomed to the room where the study took place, an ordinary office with a 
-symmetrical setup (two setups [NAO, Monitor, 2 keyboards]) on either side (see picture below).
+symmetrical setup (two setups [NAO, Monitor, 2 keyboards]) on either side (see picture below). <b/> Please prepare the experimental setup in advance and don't make any changes! </b>
 
 <pre>
 Experimental setup 
