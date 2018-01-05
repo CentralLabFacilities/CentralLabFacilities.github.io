@@ -327,8 +327,7 @@ This resulted in the robot's motors being turned on and stiffened. The robot's h
 
 After doing the interactive task, participants were told to contact the experimenter next door and to complete the survey (see script). To do so, participants were seated on a pc next door and completed an online-survey in Unipark.
 
-After the experiment, participants received a full disclosure about what the study was really about and any further 
-questions answered. 
+After the experiment, participants received were informed that the aim of the study was to test social simon effect with an anthropomorphic NAO robot and further questions were answered. 
 
 # Results
 
