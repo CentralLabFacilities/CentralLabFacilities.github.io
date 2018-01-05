@@ -339,16 +339,18 @@ It is assumed that you either just calibrated the robot or, if you continue the 
 set up the Nao exactly like the last time you calibrated (remember: use e.g. tape to mark the robots postion).
 
 Switch to the Jenkins in your browser (you need to be logged in) https://localhost:8080/?auto_refresh=true.
-Trigger the job "runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly" (stopwatch icon), 
-enter the IP and port of the robot in the small popup window and confirm the dialog.
+Trigger the job ...
+
+**"runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly**" (stopwatch icon) 
+
+... and enter the IP and port of the robot in the small popup window and confirm the dialog.
 
 Now, in another browser (Firefox) window or a new browser tab enter the following address into the address bar: 
 
 **http://localhost:5000/**
 
-You should see the first experiment setup slide!
+You should see the first experiment setup slide! You don't need to enter anything on this slide. Just click "submit answers".
 
-You don't need to enter anything on this slide. Just click "submit answers".
 On the next slide, you have to choose on which side the robot is kneeling. Choose right or left and &mdash; congratulations &mdash;
 the setup is done! The robot should stiffen and move the correct arm towards the keyboard. This should be done before
 the subject enters the room or sees the robot.
