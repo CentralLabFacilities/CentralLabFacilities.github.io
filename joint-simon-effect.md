@@ -234,31 +234,36 @@ e.g. sudo apt-get install python-requests python-sphinx wmctrl libssl-dev libffi
 
 Hint: You can safely ignore other warnings (other mentioned problems). In the unlikely case something is wrong in general &mdash; please contact us.
 
-Now, go back to your browser: https://localhost:8080/?auto_refresh=true  You should see something similar to this:
+Now, go back to your browser: https://localhost:8080/?auto_refresh=true  you should see something similar to the image below:
  
 ![jenkins_done](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/remote_lab_jobs.png)
 
-In order to deploy (install) the entire software system, the **only** thing you need to do is to click the "stopwatch" icon
-next to the build job "remotelab-nightly-toolkit-orchestration".
+In order to deploy (install) the entire software system, the **only** thing you need to do is to click the stopwatch icon
+next to the build job called:
+
+**"remotelab-nightly-toolkit-orchestration"**
 
 ![jenkins_trigger](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/trigger_job.png)
 
-The Jenkins will guide you to a next page that displays a dialog "ageLimit ..." Just press the blue build button.
-In order to get back to the overview page, simply click the top left Jenkins icon. Our toolchain will now install all 
-required software components for you automagically. 
+The Jenkins will guide you to a next page that displays a dialog "ageLimit ...". Just press the build button.
+In order to get back to the overview page, simply click the top left Jenkins icon. 
 
-When it's done (this can take up to 10 minutes) all, except for two, jobs in your Jenkins instance should turn from grey
-(haven't been built yet) to blue (successfully installed). 
+Our CITK toolchain will now install all required software components for you automagically. 
+
+When it's done (can take up to 10 minutes) all, except for two, jobs in your Jenkins instance should turn from grey
+(haven't been built yet) to blue (successfully build & installed). 
 
 NOTE: You only need to install the system **once**.
 
-There will be  **TWO** "grey" jobs: 
+There will be  **TWO** grey jobs: 
 
-- "runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly"
-- "runnable-remotelab-jsp-nao-calibration-master-runnable-toolkit-remotelab-nightly" 
+- a) "runnable-remotelab-jsp-nao-calibration-master-runnable-toolkit-remotelab-nightly" 
+- b) "runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly"
 
-The latter is missing in the image below, don't worry... These jobs will be used later on to a) actually calibrate the 
-robot and b) **RUN** your experiment!
+The latter is missing in the image below, don't worry...These jobs will be used later on to 
+
+- a) actually **CALIBRATE** the robot 
+- b) **RUN** your experiment!
 
 How cool is that? Leave this for now, we will now setup the physical parts.
 
@@ -266,45 +271,38 @@ How cool is that? Leave this for now, we will now setup the physical parts.
 
 ## Step 4: Physical Experiment Setup
 
-Because two NAOS were available at Bielefeld, a symmetrical setup was installed in an otherwise empty office.
-The two monitors were connected to the same workstation. The displays were set to mirror mode, showing the same image.
+Because two NAOS were available at Bielefeld, a symmetrical setup was orginally installed in an otherwise empty office.
 
-Because having two NAOs is not given in every laboratory, we will describe a setup using just **one** NAO in the following.
-The setup is easily adjustable by moving the robot from one side to another depending on the chosen position (see Step 6).
+Having two NAOs available is not given in every laboratory, thus we will describe a setup using just **one** NAO in the following. The setup is easily adjustable by moving the robot from one side to another depending on the chosen position (see Step 6).
 
 <img align="left" hspace="20" src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/pepper_setup_table.jpg" width=300px>
 <img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/pepper_press.jpg" width=300px>
 
-The viewing distance is taken from the original Stenzel paper (approx. 80cm). The NAO kneels (predefined resting posture by
-the manufacturer) next to the participants on a table. The barycenter of the robot is approximately at elbow height of a
-sitting participant.
+The viewing distance is taken from the original Stenzel paper (approx. 80cm). The NAO kneels next to the participants on a table or chair. The barycenter of the robot is approximately at elbow height of a sitting participant.
 
 The participant and the robot each have their own keyboard of identical type. The keyboards are directly adjacent (touching)
 and on the _same level_. 
 
 The posture of the robot's hand above the keyboard is predefined and will be individually set up using a calibration program 
-that will be introduced in the next step. Calibration is necessary because there might be little differences in positioning 
-at different labs and the angles of the NAO's motors might deviate from robot to robot.
-
-The robot's head is turned towards the screen to indicate that the robot is looking at it.
+that will be introduced in the next step. Calibration is necessary because there might be differences in the positioning of the 
+robot in different lab setups and the angles of the NAO's motors might deviate from robot to robot. The robot's head is turned towards the screen to indicate that the robot is looking at it.
 
 ## Step 5: Calibration procedure
 
-**During calibration, the robot's stiffness needs to be released. If the motors are stiff, release stiffness with
-two short chest button presses.**
+During calibration, the robot's stiffness **needs to be released**. If the motors are stiff (e.g. arms cannot be moved easily), release the stiffness with two short chest button presses.
 
-It is assumed that the robot is powered on and already connected to the network as described in "Hardware Requirements
-and Prerequisites".
+It is assumed that the robot is powered on and already connected to the network as described in Step 1.
+Assuming you set up the experiment exactly as described above you should check the robot's IP one last time. You can do this
+by pressing the chest button, the robot will tell you its IP. Remember the address, e.g., 192.168.1.30. 
 
-Assuming you set up the experiment as described above you should check the robot's IP one last time. You can do this
-by pressing the chest button. Remember the IP address, e.g., 192.168.1.30. You will **need it** in the following steps. 
+You will **need it** in the next steps. 
 
 During the calibration procedure the arm postures for the key press movement (left and right side), needed in
-the experiment, will be recorded.
+the experiment, will be recorded and saved.
 
-If you have to move the robot in general (because, e.g., it is also used by others) you should mark the exact foot
-position on the table/chair with tape. Additionally, you have to set the robot to a stable hip-roll position.
-Remember the approximate angle.
+If you have to move the robot (because, e.g., it is also used by others) you should mark the exact foot
+position on the table/chair with tape. Additionally, you have to set the robot to a stable hip-roll position, so 
+that it does not fall over. Remember the approximate angle.
 
 During the calibration procedure there are four postures recorded: 
 
@@ -313,8 +311,7 @@ During the calibration procedure there are four postures recorded:
 - _keyrelease_
 - _keypress_.
 
-The posture recording is triggered via a so called _build job_ (in the Jenkins) which is explained in the following. Please, 
-switch to the Jenkins in your browser:
+The posture recording is, again, triggered via a so called _build job_ (in the Jenkins browser window) Please, switch to the Jenkins in your browser window:
  
 https://localhost:8080/?auto_refresh=true
 
@@ -322,13 +319,15 @@ Log in (if not already) and trigger the job by pressing the stopwatch icon next 
  
 **"runnable-remotelab-jsp-nao-calibration-master-runnable-toolkit-remotelab-nightly"**
 
-Wait a few seconds until a new program/application appears and follow the instructions that appear on the screen.
+Wait a few seconds until a new program/application pops up and follow the instructions that appear in the application window.
 
-You will be asked for whether you want to record postures for the left or right arm and then to move the easily moveable 
+You will be asked if you want to record postures for the left or right arm and then to move the easily moveable 
 arms (thus not stiffened) to the positions as depicted in the application.
 
-Please execute the calibration for the left and right arm, i.e., trigger the job two times, 1st time for left, 
-second time for right arm.
+Please execute the calibration for the left and right arm, i.e., trigger the job two times: 
+
+- 1st time for left 
+- 2nd time for right arm
 
 Great, you are done! Now you can run the experiment.
 
