@@ -253,15 +253,15 @@ When it's done (this can take up to 10 minutes) all, except for two, jobs in you
 
 NOTE: You only need to install the system **once**.
 
-There will be  **TWO** "grey" jobs: "runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly" and
-"runnable-remotelab-jsp-nao-calibration-master-runnable-toolkit-remotelab-nightly" (the latter is missing in the image below,
-don't worry...).
+There will be  **TWO** "grey" jobs: 
 
-These jobs will be used later on to a) actually calibrate the robot and b) **RUN** your experiment!
+- "runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly"
+- "runnable-remotelab-jsp-nao-calibration-master-runnable-toolkit-remotelab-nightly" 
 
-How cool is that?
+The latter is missing in the image below, don't worry... These jobs will be used later on to a) actually calibrate the 
+robot and b) **RUN** your experiment!
 
-Leave this for now, we will now setup the physical parts.
+How cool is that? Leave this for now, we will now setup the physical parts.
 
 ![jenkins_trigger](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/remote-lab-done.png)
 
