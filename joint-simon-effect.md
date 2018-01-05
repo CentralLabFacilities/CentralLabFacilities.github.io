@@ -299,14 +299,19 @@ Voila, you're all set.
 
 # Subjects
 
-Subjects were recruited via advertisements that were spread at the nearby campus. The advertisment informed that we invite people over 18 years to participate in a co-operational study for about 45min and that participation would be reimbursed with 8€. Not to bias participants, the robot was nor mentioned neither illustrated in the advertisment. Although most students are familiar with CITEC-related research and might have anticipated that the study is somehow related to robots.
+Subjects were recruited via advertisements that were spread at the nearby campus. The advertisment informed that we invite people over 18 years to participate in a co-operational study for about 45min and that participation would be reimbursed with 8€. Not to bias participants, the robot was nor mentioned neither illustrated in the advertisment. Although most students were familiar with CITEC-related research and might have anticipated that the study was somehow related to robots.
 
 ## Procedure
 
 The experiment consisted of two parts. Firstly, participants did an interactive task with NAO robot. Secondly, they completed a survey.
 
-Firstly, each participant was welcomed and led to the room were the study took place, an ordinary office with a 
-symmetrical setup (two setups [NAO, Monitor, 2 keyboards]) on either side. Participants were asked to take seat and to
+Firstly, each participant was welcomed and led to the room where the study took place, an ordinary office with a 
+symmetrical setup (two setups [NAO, Monitor, 2 keyboards]) on either side (see picture below).
+
+
+
+
+Participants were asked to take seat and to
 turn off their mobile phone or set it to flight mode. The robot was introduced as if it was just another robotic participant, but without further description or details. Participants were told that the study instructions would be displayed on-screen. 
 As described in the previous step, the study was initiated by the operator during the first setup slides.
 
