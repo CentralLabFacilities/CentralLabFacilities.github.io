@@ -243,13 +243,11 @@ Now, go back to your browser: https://localhost:8080/?auto_refresh=true  You sho
 In order to deploy (install) the entire software system, the **only** thing you need to do is to click the "stopwatch" icon
 next to the build job "remotelab-nightly-toolkit-orchestration".
 
-The Jenkins will guide you to a next page that displays a dialog "ageLimit ..." **Just press the blue build button**.
-In order to get back to the overview page, simply click the top left Jenkins icon.
-
-
 ![jenkins_trigger](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/trigger_job.png)
 
-Our toolchain will now install all required software components for you **automagically**. 
+The Jenkins will guide you to a next page that displays a dialog "ageLimit ..." Just press the blue build button.
+In order to get back to the overview page, simply click the top left Jenkins icon. Our toolchain will now install all 
+required software components for you automagically. 
 
 When it's done (this can take up to 10 minutes) all, except for two, jobs in your Jenkins instance should turn from grey
 (haven't been built yet) to blue (successfully installed). 
@@ -299,9 +297,9 @@ It is assumed that the robot is powered on and already connected to the network 
 and Prerequisites".
 
 Assuming you set up the experiment as described above you should check the robot's IP one last time. You can do this
-by pressing the chest button. Remember the IP address, e.g., 192.168.1.30. You will need it in the following steps. 
+by pressing the chest button. Remember the IP address, e.g., 192.168.1.30. You will **need it** in the following steps. 
 
-During the calibration procedure the arm postures for the key press movement (left and right side), obviously needed in
+During the calibration procedure the arm postures for the key press movement (left and right side), needed in
 the experiment, will be recorded.
 
 If you have to move the robot in general (because, e.g., it is used by others) you should mark the exact foot
@@ -309,18 +307,17 @@ position on the table with e.g. tape. Additionally, you have to set the robot to
 Remember the approximate angle. You can, e.g., align the back of the Nao with a book you put on the table for setup purposes.
 
 In the calibration procedure there are four postures recorded : _prepose_, _safepose_, _keyrelease_ and _keypress_.
-The posture recording is triggered via a so called _job_ (in the Jenkins) that is explained in the following.
+The posture recording is triggered via a so called _job_ (in the Jenkins) this is explained in the following.
 
 Now, switch to the Jenkins in your browser https://localhost:8080/?auto_refresh=true
 
-Log in and trigger the job "runnable-remotelab-jsp-nao-calibration-master-runnable-toolkit-remotelab-nightly" (stopwatch icon)
-, follow the instructions on screen.
+Log in (if not already logged in) and trigger the job **"runnable-remotelab-jsp-nao-calibration-master-runnable-toolkit-remotelab-nightly"**
+(stopwatch icon), follow the instructions that appear on the screen.
 
-You will be asked for whether you want to record postures for the left or right
-arm and then to move the easily moveable arms (thus not stiffened) to the positions as depicted in the program.
+You will be asked for whether you want to record postures for the left or right arm and then to move the easily moveable 
+arms (thus not stiffened) to the positions as depicted in the program.
 
-Please execute the calibration for the left and right arm (trigger the job two times, 1st time for left,
-second time for right arm).
+Please execute the calibration for the left and right arm (trigger the job two times, 1st time for left, second time for right arm).
 
 Great, you are done! Now you can run the experiment.
 
