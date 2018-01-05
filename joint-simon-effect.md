@@ -281,9 +281,12 @@ the manufacturer) next to the participants on a table. The barycenter of the rob
 sitting participant.
 
 The participant and the robot each have their own keyboard of identical type. The keyboards are directly adjacent (touching)
-and on the _same level_. The posture of the robot's hand above the keyboard is predefined and will be individually set up
-using a calibration program that will be introduced later. Calibration is necessary because there might be little
-differences in positioning at the institutions and the angles of the NAO's motors might deviate from robot to robot.
+and on the _same level_. 
+
+The posture of the robot's hand above the keyboard is predefined and will be individually set up using a calibration program 
+that will be introduced in the next step. Calibration is necessary because there might be little differences in positioning 
+at different labs and the angles of the NAO's motors might deviate from robot to robot.
+
 The robot's head is turned towards the screen to indicate that the robot is looking at it.
 
 ## Step 5: Calibration procedure
