@@ -69,6 +69,14 @@ press the chest button of the robot again (single short press). The robot will t
 its IP address. On the laptop/PC you can now ping the robot's IP, check if you get a "pong". 
 It is also recommended to leave the power cord of the robot plugged during the experiment.
 
+An example for the network configuration is depicted below. Version A depicts a setup using
+a dedicated router, Version B depicts a setup that uses the existing local network infrastructute, 
+e.g., in your laboratory.
+
+<img align="left" hspace="20" src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/network_setup.png" width=300px>
+
+In order to check if the network connection works, open a terminal and type:
+
 <pre>
 ping ROBOT_IP
 </pre>
