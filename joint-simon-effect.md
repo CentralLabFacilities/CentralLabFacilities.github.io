@@ -309,7 +309,7 @@ Firstly, each participant was welcomed and led to the room where the study took 
 symmetrical setup (two setups [NAO, Monitor, 2 keyboards]) on either side (see picture below).
 
 <pre>
-Lab 2.0
+Experimental setting 
 </pre>
 
 <img align="center" hspace="20" img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/Lab%202.0.jpg" width=300px>
