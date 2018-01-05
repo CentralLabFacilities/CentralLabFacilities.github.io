@@ -73,7 +73,7 @@ An example for the network configuration is depicted below. Version A depicts a 
 a dedicated router, Version B depicts a setup that uses the existing local network infrastructute, 
 e.g., in your laboratory.
 
-<img hspace="20" src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/network_setup.png" width=500px>
+<img hspace="20" src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/network_setup.png" width=600px>
 
 In order to check if the network connection works, open a terminal and type:
 
