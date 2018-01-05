@@ -145,14 +145,34 @@ Download the jenkins-jse.tar.gz. In the remainder of this tutorial we will work 
 
 <pre>
 mkdir -p $HOME/citk/ && cd $HOME/citk/
-wget --no-check-certificate https://ci.toolkit.cit-ec.de/job/jenkins-distribution/lastStableBuild/artifact/jenkins.tar.gz -O jenkins.tar.gz
+wget --no-check-certificate https://ci.toolkit.cit-ec.de/job/jenkins-distribution/lastStableBuild/artifact/jenkins.tar.gz -O jenkins-jse.tar.gz
 </pre>
 
+Extract the archive...
 
-**Stop** after "Step #3: Expected Result", do **not** proceed to the next tutorial mentioned on the web site
-(Installing a Distribution). In general, you will need to execute the steps in the grey boxes in a terminal.
+<pre>
+tar -xzvf jenkins-jse.tar.gz
+cd jenkins
+</pre>
 
-After you've finished the above tutorial you should see something similar to the picture below when accessing your
+Once extraction is completed, you need to configure a new user for Jenkins (can be skipped when upgrading from a previous release).
+Please **remember** the user and password, you will need it later!
+
+<pre>
+./create_user.sh
+</pre>
+
+Provide the required instructions in the terminal. Afterwards, Jenkins can be started.
+
+<pre>
+./start_jenkins
+</pre>
+
+Now, you may open the Jenkins Dashboard at https://localhost:8080/?auto_refresh=true in your Browser.
+
+Login using the credentials you chose in the previous "./create_user" step.
+
+You should see something similar to the picture below when accessing your
 localhost https://localhost:8080/?auto_refresh=true
 
 Please login (top right corner) using the credentials you chose when executing the "./create_user" step.
@@ -170,6 +190,7 @@ Please open a new terminal and execute the following steps.
 <pre>
 mkdir -p $HOME/citk/dist && cd $HOME/citk/dist
 git clone https://opensource.cit-ec.de/git/citk .
+git checkout d6bc5c98cec80aec28cc
 </pre>
 
 In the next step please substitute "{YOUR_USERNAME}" and {YOUR_PASSWORD} with the credentials in
