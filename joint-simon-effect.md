@@ -45,6 +45,10 @@ without explicit belief manipulation of the subjects (cf. [2] "biologically insp
 
 ## Step 1: Hardware Requirements and Prerequisites
 
+In case you a not familiar with setting up a network, it might be helpful to ask 
+someone in your lab who is experienced to help you setting it up. However, this is
+a relatively easy task and hopefully well-described here.
+
 Any recent standard NAO robot platform (acquired within the last 2-3 years) should suffice. 
 The software interface to the robot is downward compatible to NAOQi 1.x.x in this experiment.
 
@@ -56,24 +60,25 @@ At least two cpu cores, and 2 GB Ram (4 GB recommended) should suffice. Addition
 it is required that the robot and the laptop/PC are connected to the same network (subnet). 
 
 We also strongly recommend a **wired** network connection for both, the robot 
-and the laptop. If there is absolutely no chance of establishing a wired connection, 
-WiFi will also work. However, since WiFi usually introduces a higher 
+and the laptop, you will need two calbes. If there is absolutely no chance of establishing 
+a wired connection, WiFi will also work. However, since WiFi usually introduces a higher 
 latency and instability than a wired connection, we disadvise using it.
 
 In order to check if the laptop/PC 'can talk to' the robot, simply plug a network cable
 into the NAO (back of the head, open the service hatch first). Startup the laptop and connect
 it to the same network, either via router or your local network infrastructure. As soon as the laptop 
 is up and running, press the robot's chest button (single long press) to initiate the boot sequence. 
+
 This will take a few minutes. When the NAO is ready (startup jingle is over) 
 press the chest button of the robot again (single short press). The robot will tell you
 its IP address. On the laptop/PC you can now ping the robot's IP, check if you get a "pong". 
 It is also recommended to leave the power cord of the robot plugged during the experiment.
 
-An example for the network configuration is depicted below. Version A depicts a setup using
-a dedicated router, Version B depicts a setup that uses the existing local network infrastructute, 
+An example of the network setup is depicted below. Version A depicts a setup using
+a dedicated router, Version B depicts a setup that uses the existing local network infrastructure, 
 e.g., in your laboratory.
 
-<img hspace="20" src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/network_setup_robot.png" width=600px>
+<img hspace="20" src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/network_setup_robot.png" width=630px>
 
 In order to check if the network connection works, open a terminal and type:
 
@@ -91,7 +96,7 @@ important to have the same resolution, i.e. 1920:1200 at a display size of 24 in
 
 The exact physical setup will be described later. These are just the prerequisites you need to check.
 
-## Software Requirements and Prerequisites
+## Step 2: Software Requirements and Prerequisites
 
 In general, the software for this experiment has been designed and tested on Ubuntu Linux (16.04). 
 **That's a prerequisite**. In case you a not familiar with *nix operating systems, it might be helpful to ask 
@@ -99,10 +104,13 @@ someone in your lab who is experienced to help you setting up the infrastructure
 about *nix operating systems, the next steps will be a "piece of cake".
  
 Download [Ubuntu 16.04]: https://www.ubuntu.com/download/desktop/contribute?version=16.04.3&architecture=amd64 
-and install it on the laptop/PC. If you already have a machine with Ubuntu 16.04 installed that meets the requirements, 
-check if you have sudo permissions, you will need them in the following steps.
+and install it on the laptop/PC. Please **note***: do **not** use the Ubuntu Live Version ("Try Ubuntu" in the installer)
+, please select "Install Ubuntu" and proceed. 
 
-Before proceeding, please execute this in a terminal in order to get your system up to date
+If you already have a machine with Ubuntu 16.04 installed that meets the requirements, check if you have sudo permissions, 
+you will need them in the following steps.
+
+Before proceeding, please execute this in a terminal in order to get your system up to date.
 
 <pre>
 sudo apt update && sudo apt upgrade
@@ -121,7 +129,7 @@ When the update process is finished, please proceed. Note: since almost everythi
 is done in a web browser (e.g., experiment execution and orchestration) please use the
 **Firefox** web browser that is shipped with Ubuntu --- we verified every feature works with Firefox.
 
-# Deploying the Software Infrastructure for the Experiment
+# Step 3: Deploying the Software Infrastructure for the Experiment
 
 ## Bootstrapping the CITK
 
