@@ -303,20 +303,30 @@ by pressing the chest button. Remember the IP address, e.g., 192.168.1.30. You w
 During the calibration procedure the arm postures for the key press movement (left and right side), needed in
 the experiment, will be recorded.
 
-If you have to move the robot in general (because, e.g., it is used by others) you should mark the exact foot
-position on the table with e.g. tape. Additionally, you have to set the robot to a stable hip-roll position.
-Remember the approximate angle. You can, e.g., align the back of the Nao with a book you put on the table for setup purposes.
+If you have to move the robot in general (because, e.g., it is also used by others) you should mark the exact foot
+position on the table/chair with tape. Additionally, you have to set the robot to a stable hip-roll position.
+Remember the approximate angle.
 
-In the calibration procedure there are four postures recorded : _prepose_, _safepose_, _keyrelease_ and _keypress_.
-The posture recording is triggered via a so called _job_ (in the Jenkins) this is explained in the following.
+During the calibration procedure there are four postures recorded: 
 
-Now, switch to the Jenkins in your browser https://localhost:8080/?auto_refresh=true
+- _prepose_ 
+- _safepose_
+- _keyrelease_
+- _keypress_.
 
-Log in (if not already logged in) and trigger the job **"runnable-remotelab-jsp-nao-calibration-master-runnable-toolkit-remotelab-nightly"**
-(stopwatch icon), follow the instructions that appear on the screen.
+The posture recording is triggered via a so called _build job_ (in the Jenkins) which is explained in the following. Please, 
+switch to the Jenkins in your browser:
+ 
+https://localhost:8080/?auto_refresh=true
+
+Log in (if not already) and trigger the job by pressing the stopwatch icon next to the job:
+ 
+**"runnable-remotelab-jsp-nao-calibration-master-runnable-toolkit-remotelab-nightly"**
+
+Wait a few seconds until a new program/application appears and follow the instructions that appear on the screen.
 
 You will be asked for whether you want to record postures for the left or right arm and then to move the easily moveable 
-arms (thus not stiffened) to the positions as depicted in the program.
+arms (thus not stiffened) to the positions as depicted in the application.
 
 Please execute the calibration for the left and right arm, i.e., trigger the job two times, 1st time for left, 
 second time for right arm.
