@@ -127,7 +127,7 @@ sudo apt upgrade
 
 When the update process is finished, please proceed. Note: since almost everything in this experiment
 is done in a web browser (e.g., experiment execution and orchestration) please use the
-**Firefox** web browser that is shipped with Ubuntu --- we verified every feature works with Firefox.
+**Firefox** web browser that is shipped with Ubuntu &mdash; we verified every feature works with Firefox.
 
 # Step 3: Deploying the Software Infrastructure for the Experiment
 
