@@ -271,8 +271,7 @@ Because two NAOS were available at Bielefeld, a symmetrical setup was installed 
 The two monitors were connected to the same workstation. The displays were set to mirror mode, showing the same image.
 
 Because having two NAOs is not given in every laboratory, we will describe a setup using just **one** NAO in the following.
-The setup is easily adjustable by moving the robot from one side to another depending on the chosen position
-condition which is assigned automatically by our software.
+The setup is easily adjustable by moving the robot from one side to another depending on the chosen position (see Step 6).
 
 <img align="left" hspace="20" src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/pepper_setup_table.jpg" width=300px>
 <img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/pepper_press.jpg" width=300px>
