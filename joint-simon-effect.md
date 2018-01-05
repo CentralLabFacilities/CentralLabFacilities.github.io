@@ -98,14 +98,15 @@ The exact physical setup will be described later. These are just the prerequisit
 
 ## Step 2: Software Requirements and Prerequisites
 
-In general, the software for this experiment has been designed and tested on Ubuntu Linux (16.04). 
-**That's a prerequisite**. In case you a not familiar with *nix operating systems, it might be helpful to ask 
+In general, the software for this experiment has been designed and tested on Ubuntu Linux (16.04). **That's a prerequisite**. 
+
+In case you a not familiar with *nix operating systems, it might be helpful to ask 
 someone in your lab who is experienced to help you setting up the infrastructure. If you have basic knowledge 
 about *nix operating systems, the next steps will be a "piece of cake".
  
 Download Ubuntu 16.04: https://www.ubuntu.com/download/desktop/contribute?version=16.04.3&architecture=amd64 
 and install it on the laptop/PC. Please note: do **not** use the Ubuntu Live Version ("Try Ubuntu" in the installer)
-, please select "Install Ubuntu" and proceed. 
+, please **select** "Install Ubuntu" and proceed as explained in the Ubuntu installer routine. 
 
 If you already have a machine with Ubuntu 16.04 installed that meets the requirements, check if you have sudo permissions, 
 you will need them in the following steps.
