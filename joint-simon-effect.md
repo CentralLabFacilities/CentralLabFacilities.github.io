@@ -308,7 +308,7 @@ The experiment consisted of two parts. Firstly, participants did an interactive 
 Firstly, each participant was welcomed and led to the room where the study took place, an ordinary office with a 
 symmetrical setup (two setups [NAO, Monitor, 2 keyboards]) on either side (see picture below).
 
-
+![Lab 2.0]()
 
 
 Participants were asked to take seat and to
