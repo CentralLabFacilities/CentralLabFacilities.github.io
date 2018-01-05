@@ -366,6 +366,7 @@ When you're done for the day, you **may** shut down everything. When you continu
 - a) physically setup the NAO (if it has been moved) 
 - b) start the Jenkins using the "./start_jenkins" script like you have done it before
 - c) trigger the "runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly"
+- d) open another tab an go to http://localhost:5000/
 
 Voila, you're all set again.
 
@@ -380,53 +381,45 @@ students were familiar with CITEC-related research and might have anticipated th
 
 ### Assignment to Experimental Conditions and Documentation
 
-It is important that equal numbers of participants in total and of males and females are tested per condition. 
-Therefore, the experimenter assigned the participant to a condition (whether participant sits left or right to the robot)
-before she/he entered the room!
+It is important that equal numbers of participants in total and ideally of males and females are tested per condition. 
+Therefore, the experimenter assigned the participant to a condition in the browser (participant sits left or right to the robot) **before** she/he entered the room.
 
-TODO: is the gender really important for the JSE? It is important to note the gender, but I guess it is
-not really possible to have an equal number of female and male subjects since they are recruited by advertisement.
-
-To do so, it was important to document how many participants were assigned to each condition and whether they were male 
-and female. That's why **lists were prepared in advance** to document participant number, condition, participant's 
+To do so, it it important to document how many participants were assigned to each condition and whether they were male 
+and female. That's why **lists were prepared in advance** to document participant unique id, condition, participant's 
 gender, experimenter's name, and further comments to report whether everything went well or whether there were any difficulties. 
 For instance, technical issues  or participant- or experimenter-related issues. <b/> The assignment of participants to the 
 experimental conditions and the documentation of the course of the study is very important. Please prepare in advance! </b>
 
 Below you can find an example of a possible documentation and list you can prepare.
 
-| Position      | Gender        | UID   | Comment    |
-| ------------- |:-------------:| :----:| ----------:|
-| left          | male          | abc1  | none       | 
-| right         | female        | bcd3  | seems tired|
-| left          |               |       |            |
+| Position      | Gender        | UID   | Comment    | Experimenter |
+| ------------- |:-------------:| :----:| ----------:| ----------:  |
+| left          | male          | abc1  | none       |  Florian     |
+| right         | female        | bcd3  | seems tired|  Florian     |
+| left          | ...           | ...   | ...        |  ...         |
 
 
 ### Procedure
 
-The experiment consists of two parts. Firstly, participants did an interactive task with NAO robot. 
-Secondly, they completed a survey.
+The experiment consists of two parts. Firstly, participants did an interactive task with NAO robot. Secondly, they completed a survey.
 
-Firstly, each participant is welcomed to the room where the study takes place (robot has to be prepared **before that**). 
+First, each participant is welcomed to the room where the study takes place (robot has to be prepared **before that**). 
 
 Participants were asked to take seat and to turn off their mobile phone or set it to flight mode. The robot was introduced 
-as if it was just another robotic participant, but without further description or details. Participants were told that the 
-study instructions would be displayed on the screen. As described in the previous step, the study was initiated (left, right) 
-by the operator during the first setup slides. This resulted in the robot's motors being turned on and stiffened. 
-The robot's hand next to the participant moved to the initial position over to the space bar to introduce the robot's ability 
-to move to the participant. Participants were asked to follow the instructions on the screen and to contact the 
+as if it was just another participant, but without further description or details. Participants were told that the 
+study instructions would be displayed on the screen when the experiment starts. As described in the previous step, the study was initiated (left, right) by the operator during the first setup slides. This resulted in the robot's motors being turned on and stiffened. The robot's hand next to the participant moved to the initial position over to the space bar to introduce the robot's ability to move to the participant. Participants were asked to follow the instructions on the screen and to contact the 
 experimenter in case they had questions or if the experiment was done.
 
 After doing the interactive task, participants were told to contact the experimenter next door and to complete the survey. 
-To do so, participants were seated on a pc next door and completed an online-survey via Unipark.
+To do so, participants were seated next door and completed an online-survey.
 
-After the experiment, participants were informed that the aim of the study was to test joint simon effect with 
-an anthropomorphic NAO robot and further questions were answered.
+After the experiment, participants were informed (debriefed) that the aim of the study was to test the joint simon effect with 
+an anthropomorphic NAO robot and all further questions were answered.
 
 ### Results
 
 At the end of the experiment, after the participant is done, the last slide asks you to download the experiment 
-data as a .csv  file with the **unique id** of the participant as file name.
+data as a .csv file with the **unique id** of the participant as **file name**.
 
 Please store this file on your computer and regularly **backup your data**! Note the unique id in your
 documentation table (see above)!
