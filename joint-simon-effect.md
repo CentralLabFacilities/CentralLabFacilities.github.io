@@ -174,8 +174,7 @@ Now, you may open the Jenkins Dashboard at https://localhost:8080/?auto_refresh=
 
 Login using the credentials you chose in the previous "./create_user" step.
 
-You should see something similar to the picture below when accessing your
-localhost https://localhost:8080/?auto_refresh=true
+You should see something similar to the picture below.
 
 Please login (top right corner) using the credentials you chose when executing the "./create_user" step.
 **Don't** close the terminal in which your Jenkins is running. You are all set for now.
@@ -204,7 +203,7 @@ $HOME/citk/jenkins/job-configurator --on-error=continue -d $HOME/citk/dist/distr
 
 Now, there are two things to check:
 
-A) You should see the following at the end of the console output
+**A)** You should see the following at the end of the console output
 
 <pre>
 START ENABLE-JOBS
@@ -218,7 +217,7 @@ END   LIST-CREDENTIALS, 0.000 seconds
 100.00 % JOBS
 </pre>
 
-B) **IMPORTANT** Please also check the console output for the following (you might need to scroll up a little). 
+**B)** Please also check the console output for the following (you might need to scroll up a little). 
 If you don't see "missing platform dependency" you are all set.
 
 <pre>
@@ -234,7 +233,7 @@ E.g.: sudo apt-get install python-requests python-sphinx wmctrl libssl-dev libff
 </pre>
 
 Hint: You can safely ignore other warnings (other mentioned problems). 
-In the unlikely case something is wrong in general --- please contact us.
+In the unlikely case something is wrong in general &mdash; please contact us.
 
 Now, go back to your browser: https://localhost:8080/?auto_refresh=true  You should see something similar to this:
  
