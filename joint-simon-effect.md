@@ -417,7 +417,7 @@ Below you can find an example of a possible documentation and list that you can 
 | left          | ...           | ...   | ...        |  ...         |
 
 
-### Procedure
+## Procedure
 
 The experiment consists of two parts. First, participants did an interactive task with NAO robot. 
 Second, they filled in a survey.
@@ -439,7 +439,7 @@ To do so, participants were seated next door and completed an online survey.
 After the experiment, participants were informed (debriefed) that the aim of the study was to test the joint simon 
 effect with an anthropomorphic robot and all further questions were answered.
 
-### Results
+## Results
 
 At the end of each trial, the last slide asks you to download the experiment data as a .csv file with the **unique id** 
 of the participant as **file name**.
