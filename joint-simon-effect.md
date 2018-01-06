@@ -287,12 +287,12 @@ Build Queue
 
 ![jenkins_queue](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/build_queue.png)
 
-When it's done (can take up to 10 minutes), all except for two, jobs in your Jenkins instance should turn from grey
-&mdash; haven't been built yet &mdash; to blue &mdash; successfully build & installed &mdash; 
+When it's done (can take up to 10 minutes), all except for two, jobs in your Jenkins instance should turn from _grey_
+&mdash; haven't been built yet &mdash; to _blue_ &mdash; successfully build & installed. 
 
-NOTE: You only need to install the system **once**.
+NOTE: You only need to install the complete system **once**.
 
-![jenkins_trigger](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/jenkins_done_complete.png)
+![jenkins_complete](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/jenkins_done_complete.png)
 
 There will be  **TWO** grey jobs: 
 
