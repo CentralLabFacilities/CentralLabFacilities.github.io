@@ -102,18 +102,20 @@ The exact physical setup will be described later. These are just the prerequisit
 
 ## Step 2: Software Requirements and Prerequisites
 
-In general, the software for this experiment has been designed and tested on Ubuntu Linux (16.04). **That's a prerequisite**. 
+In general, the software for this experiment has been designed and tested on Ubuntu Linux (16.04). 
+**That's a prerequisite**. 
 
-In case you a not familiar with Unix-like operating systems, it might be helpful to ask 
-someone in your lab who is experienced, to help you setting up the infrastructure. If you have basic knowledge 
+In case you a not familiar with Unix-like operating systems it might be helpful to ask 
+someone in your lab who is experienced to help you setting up the infrastructure. If you have basic knowledge 
 about Unix-like operating systems, the next steps will be a "piece of cake".
  
 Download Ubuntu 16.04: https://www.ubuntu.com/download/desktop/contribute?version=16.04.3&architecture=amd64 
-and install it on the experiment laptop/PC. Please note: do **not** use the Ubuntu Live Version ("Try Ubuntu" in the installer)
-, please **select** "Install Ubuntu" and proceed as explained in the Ubuntu installation routine. 
+and install it on the experiment laptop/PC. Please note: do **not** use the Ubuntu Live version 
+(option "Try Ubuntu" in the installer), please **select** "Install Ubuntu option" and proceed as explained 
+in the Ubuntu installation routine. 
 
-If you already have a machine with Ubuntu 16.04 installed, that meets the requirements, check if you have sudo permissions, 
-you will need them in the following steps.
+If you already have a machine with Ubuntu 16.04 installed, that meets the above requirements, check if you 
+have sudo permissions, you will need them in the following steps.
 
 Before proceeding installing the experiment software environment, please execute this in a terminal in order 
 to get your system up-to-date.
@@ -132,38 +134,37 @@ sudo apt upgrade
 </pre>
 
 When the update process is finished, please proceed. Note: since almost everything in this experiment
-is done in a web browser (e.g. experiment execution and orchestration) please use the
+is done in a web browser (i.e. experiment installation, execution and orchestration) please use the
 **Firefox** web browser that is shipped with Ubuntu &mdash; we verified every feature works with Firefox.
 
 ## Step 3: Deploying the Software Infrastructure for the Experiment
 
 ###  Step 3a: Bootstrapping the CITK
 
-We are using the CITK [4] to bootstrap your software experiment environment. This is how it is bootstrapped.
+We are using the CITK [4] to install your experiment software environment. This is how it is bootstrapped.
 
 First of all you will need to install the following dependencies in order to run CITK tools. Open a terminal and run the
-command below. Note: make sure you always copy the **complete line**!
+command below. Important: in the next steps, make sure you always copy the **complete line**!
 
 <pre>
 sudo apt-get install openjdk-8-jdk curl python2.7 python2.7-dev python-setuptools git subversion maven build-essential build-essential cmake
 </pre>
 
-Download the jenkins-jse.tar.gz. In the remainder of this tutorial we will work with ~/citk/ as your install $prefix.
+Download the jenkins-jse.tar.gz. In the remainder of this tutorial we will work with ~/citk/ as your installation $prefix.
 
 <pre>
 mkdir -p $HOME/citk/ && cd $HOME/citk/
 wget --no-check-certificate https://ci.toolkit.cit-ec.de/job/jenkins-distribution/lastStableBuild/artifact/jenkins.tar.gz -O jenkins-jse.tar.gz
 </pre>
 
-Extract the archive...
+Extract the archive.
 
 <pre>
 tar -xzvf jenkins-jse.tar.gz
 cd jenkins
 </pre>
 
-Once the extraction is done, you need to configure a new user for Jenkins.
-Please **remember** the user and password, you will need it later!
+Once the extraction is done, you need to configure a new user for Jenkins. Please **remember** the user and password, you will need it later!
 
 <pre>
 ./create_user.sh
@@ -175,16 +176,19 @@ Follow the required instructions in the terminal. Afterwards, Jenkins can be sta
 ./start_jenkins
 </pre>
 
-Now, you may open the Jenkins Dashboard at https://localhost:8080/?auto_refresh=true in your Browser.
+Now you may open the Jenkins Dashboard by opening https://localhost:8080/?auto_refresh=true in your browser.
 
-You should see something similar to the picture below. Please login (top right corner) using the credentials you chose when executing the "./create_user" step. **Don't** close the terminal in which your Jenkins is running. You are all set for now!
+You should see something similar to the picture below. Please login (top right corner) using the credentials you chose 
+when executing the "./create_user" step. **Don't close** the terminal in which your Jenkins is running. 
+
+You are all set for now!
 
 ![empty_jenkins](https://toolkit.cit-ec.uni-bielefeld.de/sites/toolkit.cit-ec.uni-bielefeld.de/files/tutorial_jenkins_new.jpg)
 
 ### Step 3b: Generate Distribution and Deploy
 
-We are now going to the install all required software components. This includes the software
-that is required in order to control the robot, as well as experiment execution and data acquisition. Yay!
+We are now going to the install all required software components. This includes the software that is required in order 
+to control the robot, as well as experiment execution and data acquisition. Yay!
 
 Please open a new terminal and execute the following steps.
 
@@ -201,9 +205,9 @@ the "./create_user" step and execute the command line below.
 $HOME/citk/jenkins/job-configurator --on-error=continue -d $HOME/citk/dist/distributions/remotelab-nightly.distribution -m toolkit -D toolkit.volume=$HOME/citk/systems -u {YOUR_USERNAME} -a {YOUR_PASSWORD}
 </pre>
 
-There are two things to check now:
+There are two things to carefully check now:
 
-**A)** You should see the following at the end of the console output
+**A)** You should see the following at the _end_ of the console output:
 
 <pre>
 START ENABLE-JOBS
@@ -218,39 +222,40 @@ END   LIST-CREDENTIALS, 0.000 seconds
 </pre>
 
 **B)** Please also check the console output for the following (you might need to scroll-up a little). 
-If you **don't** see "missing platform dependency" (see below) you are all set.
+If you **don't** see "missing platform dependency" (see below), you are all set.
 
 <pre>
   10 missing platform dependencies:
     python-requests python-sphinx wmctrl libssl-dev libffi-dev libzmq-dev libxml2-dev libxslt1-dev zlib1g-dev python-tk
 </pre>
 
-If missing dependencies are reported you **need to** install them using:
+If missing dependencies are reported in the console output you **need to** install them:
 
 <pre>
 sudo apt-get install [list of reported packages]
-e.g. sudo apt-get install python-requests python-sphinx wmctrl libssl-dev libffi-dev libzmq-dev libxml2-dev libxslt1-dev zlib1g-dev python-tk
+Example: sudo apt-get install python-requests python-sphinx wmctrl libssl-dev libffi-dev libzmq-dev libxml2-dev libxslt1-dev zlib1g-dev python-tk
 </pre>
 
-Hint: You can safely ignore other warnings (other mentioned problems). In the unlikely case something is wrong in general &mdash; please contact us.
+Hint: You can safely ignore other warnings (other mentioned problems). 
+In the unlikely case something is wrong in general &mdash; please contact us.
 
-Now, go back to your browser: https://localhost:8080/?auto_refresh=true  you should see something similar to the image below:
+Now, go back to your browser: https://localhost:8080/?auto_refresh=true you should see something similar to the image below:
  
 ![jenkins_done](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/remote_lab_jobs.png)
 
 In order to deploy (install) the entire software system, the **only** thing you need to do is to click the stopwatch icon
-next to the build job called:
+next to the build job named:
 
 **"remotelab-nightly-toolkit-orchestration"**
 
 ![jenkins_trigger](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/trigger_job.png)
 
-The Jenkins will guide you to a next page that displays a dialog "ageLimit ...". Just press the build button.
-In order to get back to the overview page, simply click the top left Jenkins icon. 
+The Jenkins will redirect you to another page that displays a dialog "ageLimit ...". Press the build button.
+In general, to get back to the overview page, simply click the top left Jenkins icon. 
 
-Our CITK toolchain will now install all required software components for you automagically. 
+Our CITK toolchain will now install all required software components for you _automagically_. 
 
-When it's done (can take up to 10 minutes) all, except for two, jobs in your Jenkins instance should turn from grey
+When it's done (can take up to 10 minutes), all except for two, jobs in your Jenkins instance should turn from grey
 (haven't been built yet) to blue (successfully build & installed). 
 
 NOTE: You only need to install the system **once**.
@@ -260,40 +265,46 @@ There will be  **TWO** grey jobs:
 - a) "runnable-remotelab-jsp-nao-calibration-master-runnable-toolkit-remotelab-nightly" 
 - b) "runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly"
 
-The latter is missing in the image below, don't worry...These jobs will be used later on to 
+The latter job is missing in the image below, don't worry...These jobs will be used later on to:
 
 - a) actually **CALIBRATE** the robot 
 - b) **RUN** your experiment!
 
-How cool is that? Leave this for now, we will now setup the physical parts.
+How _cool_ is that? We will now setup the physical part of the experiment.
 
 ![jenkins_trigger](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/remote-lab-done.png)
 
 ## Step 4: Physical Experiment Setup
 
-Because two NAOS were available at Bielefeld, a symmetrical setup was orginally installed in an otherwise empty office.
+Because two NAOS were available at Bielefeld, a symmetrical setup was originally set up in an otherwise empty office.
 
-Having two NAOs available is not given in every laboratory, thus we will describe a setup using just **one** NAO in the following. The setup is easily adjustable by moving the robot from one side to another depending on the chosen position (see Step 6).
+Having two NAOs available is not given in every laboratory, thus we will describe a setup using just **one** NAO 
+in the following. The setup is easily adjustable by moving the robot from one side to another depending on the chosen 
+position (see Step 6) of the subject (human).
 
 <img align="left" hspace="20" src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/pepper_setup_table.jpg" width=300px>
 <img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/pepper_press.jpg" width=300px>
 
-The viewing distance is taken from the original Stenzel paper (approx. 80cm). The NAO kneels next to the participants on a table or chair. The barycenter of the robot is approximately at elbow height of a sitting participant.
+The viewing distance is taken from the original Stenzel paper (approx. 80cm). The NAO kneels next to the participants on 
+a table or chair. The barycenter of the robot is approximately at elbow height of a sitting subject.
 
-The participant and the robot each have their own keyboard of identical type. The keyboards are directly adjacent (touching)
-and on the _same level_. 
+The participant and the robot each have their own keyboard of _identical_ type. The keyboards are directly adjacent 
+(touching) and on the _same level_. 
 
 The posture of the robot's hand above the keyboard is predefined and will be individually set up using a calibration program 
 that will be introduced in the next step. Calibration is necessary because there might be differences in the positioning of the 
-robot in different lab setups and the angles of the NAO's motors might deviate from robot to robot. The robot's head is turned towards the screen to indicate that the robot is looking at it.
+robot in different lab setups and the angles of the NAO's motors might deviate from robot to robot. The robot's head is turned 
+towards the screen to indicate that the robot is looking at it.
 
 ## Step 5: Calibration procedure
 
-During calibration, the robot's stiffness **needs to be released**. If the motors are stiff (e.g. arms cannot be moved easily), release the stiffness with two short chest button presses.
+During calibration, the robot's stiffness **needs to be released**. If the motors are stiff (e.g. arms cannot be moved easily), 
+release the stiffness with two short chest button presses.
 
 It is assumed that the robot is powered on and already connected to the network as described in Step 1.
-Assuming you set up the experiment exactly as described above you should check the robot's IP one last time. You can do this
-by pressing the chest button, the robot will tell you its IP. Remember the address, e.g., 192.168.1.30. Write it down, you will **need it** in the next steps. 
+Assuming you set up the experiment exactly as described above you should check the robot's IP one last time. 
+You can do this by pressing the chest button, the robot will tell you its IP. Remember the address, e.g., 192.168.1.30. 
+Write it down, you will **need it** in the next steps.
 
 During the calibration procedure the arm postures for the key press movement (left and right side), needed in
 the experiment, will be recorded and saved.
@@ -309,123 +320,135 @@ During the calibration procedure there are four postures recorded:
 - _keyrelease_
 - _keypress_.
 
-The posture recording is, again, triggered via a so called _build job_ (in the Jenkins browser window) Please, switch to the Jenkins in your browser window:
+The posture recording is, again, triggered via a so called _build job_ (in the Jenkins browser window) Please, 
+switch to the Jenkins in your browser window:
  
 https://localhost:8080/?auto_refresh=true
 
-Log in (if not already) and trigger the job by pressing the stopwatch icon next to the job:
+Log in (if not logged in) and trigger the job below by pressing the stopwatch icon next to the job:
  
 **"runnable-remotelab-jsp-nao-calibration-master-runnable-toolkit-remotelab-nightly"**
 
-Wait a few seconds until a new program/application pops up and follow the instructions that appear in the application window.
+Wait a few seconds until a new program/application pops up and follow the instructions that appear in the application 
+window.
 
 You will be asked if you want to record postures for the left or right arm and then to move the easily moveable 
-arms (thus not stiffened) to the positions as depicted in the application.
+arms (not stiffened) to the positions as depicted in the application according to your setup.
 
 Please execute the calibration for the left and right arm, i.e., trigger the job two times: 
 
-- 1st time for left 
+- 1st time for left arm
 - 2nd time for right arm
 
-Great, you are done! Now you can run the experiment.
+Great, you are done! Now you can basically run the experiment.
 
 ## Step 6: Executing the Experiment
 
-It is assumed that you either just calibrated the robot or, if you continue the experiment another day,
-set up the Nao exactly like the last time you calibrated (remember: use e.g. tape to mark the robots postion).
+It is assumed that you either just calibrated the robot or, if you resume the experiment from day to day,
+set up the NAO exactly like the last time you calibrated, remember: always use, e.g., tape to mark the robots position.
 
 Switch to the Jenkins in your browser (you need to be logged in) https://localhost:8080/?auto_refresh=true.
-Trigger the job ...
+Next, trigger the job ...
 
 **"runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly**" (stopwatch icon) 
 
 ... and enter the IP and port (default: 9559) of the robot in the small popup window and confirm the dialog.
 
-Now, in another browser (Firefox) window or a new browser tab enter the following address into the address bar: 
+Now, in another browser window or a new browser tab enter the following address into the address bar, this will load
+the actual experiment implemented by utilizing jsPsych [5]: 
 
 **http://localhost:5000/**
 
-You should see the first experiment setup slide! You don't need to enter anything on this slide. Just click "submit answers".
+You should see the first experiment setup slide! You don't need to enter anything on this slide, click _submit answers_.
 
-On the next slide, you have to choose on which side the robot is kneeling. Choose right or left and &mdash; congratulations &mdash;
-the setup is done! 
+On the next slide, you have to choose on which side the robot is kneeling. Choose right or left and &mdash; 
+congratulations &mdash; the setup is done! 
 
-The robot should stiffen and move the correct arm towards the keyboard. This should be done before
-the subject enters the room or sees the robot.
+The robot should stiffen and move the correct arm towards the keyboard. This should be done before the subject enters 
+the room or sees the robot.
 
 Now, you can get the subject and start the experiment! Again, the subject should not be present during the setup of the robot.
 
-In general, you don't need to re-run the experiment build job *per participant*. After each trial the browser window will 
-return to its initial state (new subject).
+In general, you don't need to re-run/trigger the experiment build job *per participant*. After each trial the browser 
+window will return to its initial state (new subject).
 
-The job will keep running until you **explicitly** stop it using the "[x]" button next to the running job (see Build Queue),
-you shut down the Jenkins, you shut down the laptop, or after a maximum of 24 hrs. 
+The build job will keep running until you **explicitly** stop it using the "[x]" button next to the running job 
+(in the Build Queue), you shut down the Jenkins, you shut down the laptop, or after a maximum of **24 hrs**. 
 
 When you're done for the day, you **may** shut down everything. When you continue the next day, you just need to: 
 
-- a) physically setup the NAO (if it has been moved) 
+- a) physically setup the NAO (if it has been moved for instance) 
 - b) start the Jenkins using the "./start_jenkins" script like you have done it before
-- c) trigger the "runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly"
+- c) trigger the "runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly" build job
 - d) open another tab an go to http://localhost:5000/
 
 Voila, you're all set again.
 
 ## Subjects
 
-Subjects were recruited via advertisements that were spread at the nearby campus. The advertisment informed that we invited 
-people over 18 years to participate in a co-operational study for about 45min and that participation would be reimbursed 
-with 8€. 
+Subjects were recruited via advertisements that were spread at the nearby campus. The advertisment informed that we invite 
+people over 18 years to participate in a co-operational study that takes about 45min and that participation would be 
+reimbursed with 8€. 
 
 In order to not bias participants, the robot was not mentioned neither illustrated in the advertisment. Although most 
-students were familiar with CITEC-related research and might have anticipated that the study was somehow related to robots.
+students were familiar with CITEC-related research and might have anticipated that the study was somehow related to robotics.
 
 ### Assignment to Experimental Conditions and Documentation
 
-It is important that equal numbers of participants in total and ideally of males and females are tested per condition. 
-Therefore, the experimenter assigned the participant to a condition in the browser (participant sits left or right to the robot) **before** she/he entered the room.
+It is important that equal numbers of participants in total and ideally of males and females are tested per condition 
+(left, right). Therefore, the experimenter assigned the participant to a condition in the browser 
+(participant sits left or right to the robot) **before** she/he entered the room.
 
-To do so, it it important to document how many participants were assigned to each condition and whether they were male 
-and female. That's why **lists were prepared in advance** to document participant unique id, condition, participant's 
-gender, experimenter's name, and further comments to report whether everything went well or whether there were any difficulties. 
-For instance, technical issues  or participant- or experimenter-related issues. <b/> The assignment of participants to the 
-experimental conditions and the documentation of the course of the study is very important. Please prepare in advance! </b>
+Furthermore, it it important to document how many participants were assigned to each condition and whether they were male 
+or female. That's why **lists were prepared in advance** to document the participant's unique id, condition, participant's 
+gender, experimenter's name, and further comments to report whether everything went well or whether there were any difficulties.
+ 
+For instance, technical issues or participant- or experimenter-related issues. The assignment of participants to the 
+experimental conditions and the documentation of the course of the study is very important. **Please prepare in advance!**
 
-Below you can find an example of a possible documentation and list you can prepare.
+Below you can find an example of a possible documentation and list that you can use as a template.
 
 | Position      | Gender        | UID   | Comment    | Experimenter |
 | ------------- |:-------------:| :----:| ----------:| ----------:  |
 | left          | male          | abc1  | none       |  Florian     |
 | right         | female        | bcd3  | seems tired|  Florian     |
 | left          | ...           | ...   | ...        |  ...         |
+| right         | ...           | ...   | ...        |  ...         |
+| left          | ...           | ...   | ...        |  ...         |
 
 
 ### Procedure
 
-The experiment consists of two parts. Firstly, participants did an interactive task with NAO robot. Secondly, they completed a survey.
+The experiment consists of two parts. First, participants did an interactive task with NAO robot. 
+Second, they filled in a survey.
 
-First, each participant is welcomed to the room where the study takes place (robot has to be prepared **before that**). 
+At the beginning, each participant is welcomed to the room where the study takes place (the robot has to be 
+prepared **before that**). 
 
 Participants were asked to take seat and to turn off their mobile phone or set it to flight mode. The robot was introduced 
 as if it was just another participant, but without further description or details. Participants were told that the 
-study instructions would be displayed on the screen when the experiment starts. As described in the previous step, the study was initiated (left, right) by the operator during the first setup slides. This resulted in the robot's motors being turned on and stiffened. The robot's hand next to the participant moved to the initial position over to the space bar to introduce the robot's ability to move to the participant. Participants were asked to follow the instructions on the screen and to contact the 
+study instructions would be displayed on the screen when the experiment starts. As described in the previous step, the study 
+was initiated (left, right) by the operator during the first setup slides. This resulted in the robot's motors being turned 
+on and stiffened. The robot's hand next to the participant moved to the initial position over to the space bar to introduce 
+the robot's ability to move to the participant. Participants were asked to follow the instructions on the screen and to contact the 
 experimenter in case they had questions or if the experiment was done.
 
 After doing the interactive task, participants were told to contact the experimenter next door and to complete the survey. 
-To do so, participants were seated next door and completed an online-survey.
+To do so, participants were seated next door and completed an online survey.
 
-After the experiment, participants were informed (debriefed) that the aim of the study was to test the joint simon effect with 
-an anthropomorphic NAO robot and all further questions were answered.
+After the experiment, participants were informed (debriefed) that the aim of the study was to test the joint simon 
+effect with an anthropomorphic robot and all further questions were answered.
 
 ### Results
 
-At the end of the experiment, after the participant is done, the last slide asks you to download the experiment 
-data as a .csv file with the **unique id** of the participant as **file name**.
+At the end of each trial, the last slide asks you to download the experiment data as a .csv file with the **unique id** 
+of the participant as **file name**.
 
 Please store this file on your computer and regularly **backup your data**! Note the unique id in your
 documentation table (see above)!
 
-If you ever forget to store the data or refresh the browser before downloading, at the beginning of the next 
-experiment you can still download the file.
+If you ever forget to store the data or refresh the browser before downloading, you can still download the file 
+at the beginning of the next trail.
  
 ## Literature
 
@@ -433,3 +456,4 @@ experiment you can still download the file.
 - [2] http://journal.frontiersin.org/article/10.3389/fpsyg.2014.00974/full
 - [3] https://pub.uni-bielefeld.de/publication/2910475
 - [4] https://pub.uni-bielefeld.de/publication/2904605
+- [5] https://link.springer.com/article/10.3758/s13428-014-0458-y
