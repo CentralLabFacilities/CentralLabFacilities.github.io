@@ -182,6 +182,7 @@ Follow the required instructions in the terminal. Afterwards, Jenkins can be sta
 </pre>
 
 Now you may open the Jenkins Dashboard by opening https://localhost:8080/?auto_refresh=true in your browser.
+Please **accept** the security exception and **add** the certificate.
 
 You should see something similar to the picture below. Please login (top right corner) using the credentials you chose 
 when executing the "./create_user" step. **Don't close** the terminal in which your Jenkins is running. 
@@ -215,15 +216,35 @@ There are two things to carefully check now:
 **A)** You should see the following at the _end_ of the console output:
 
 <pre>
-START ENABLE-JOBS
-  0.00 % ENABLE
-100.00 % ENABLE
-END   ENABLE-JOBS, 0.001 seconds
+START DEPLOY/PROJECT
+  0.00 % DEPLOY/PROJECT
+  0.00 % DEPLOY/PROJECT: aldebaran-naoqi-sdk-python27
+ 11.11 % DEPLOY/PROJECT: remotelabservice
+ 22.22 % DEPLOY/PROJECT: jsp-nao-calibrate
+ 33.33 % DEPLOY/PROJECT: jspsych
+ 44.44 % DEPLOY/PROJECT: fsmt
+ 55.56 % DEPLOY/PROJECT: pyscxml
+ 66.67 % DEPLOY/PROJECT: fsmt-exp-remotelab
+ 77.78 % DEPLOY/PROJECT: runnable-remotelab-jsp-nao-calibration
+ 88.89 % DEPLOY/PROJECT: runnable-remotelab-nao-physical-demo
+100.00 % DEPLOY/PROJECT
+END   DEPLOY/PROJECT, 4.548 seconds
+
+START ORCHESTRATION
+  0.00 % ORCHESTRATION: Configuring orchestration jobs
+  0.00 % DEPLOY/VERSION
+  0.00 % DEPLOY/VERSION: #VERSION orchestration:orchestration {1006BFE933}
+  0.00 % DEPLOY/JOB
+  0.00 % DEPLOY/JOB: #JOB orchestration:orchestration:orchestration {1006BFF123}
+ 33.33 % DEPLOY/JOB: #JOB orchestration:orchestration:prepare-hook/unix {1006C5E5C3}
+ 66.67 % DEPLOY/JOB: #JOB orchestration:orchestration:finish-hook/unix {1006D9AA63}
+100.00 % DEPLOY/JOB
+100.00 % DEPLOY/VERSION
+100.00 % ORCHESTRATION
+END   ORCHESTRATION, 0.875 seconds
 
 START LIST-CREDENTIALS
 END   LIST-CREDENTIALS, 0.000 seconds
-
-100.00 % JOBS
 </pre>
 
 **B)** Please also check the console output for the following (you might need to scroll-up a little). 
