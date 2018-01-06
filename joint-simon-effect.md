@@ -288,23 +288,23 @@ Build Queue
 ![jenkins_queue](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/build_queue.png)
 
 When it's done (can take up to 10 minutes), all except for two, jobs in your Jenkins instance should turn from grey
-(haven't been built yet) to blue (successfully build & installed). 
+&mdash; haven't been built yet &mdash; to blue &mdash; successfully build & installed &mdash; 
 
 NOTE: You only need to install the system **once**.
+
+![jenkins_trigger](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/jenkins_done_complete.png)
 
 There will be  **TWO** grey jobs: 
 
 - a) "runnable-remotelab-jsp-nao-calibration-master-runnable-toolkit-remotelab-nightly" 
 - b) "runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly"
 
-The latter job is missing in the image below, don't worry...These jobs will be used later on to:
+These jobs will be used later on to:
 
 - a) actually **CALIBRATE** the robot 
 - b) **RUN** your experiment!
 
 How _cool_ is that? We will now setup the physical part of the experiment.
-
-![jenkins_trigger](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/remote-lab-done.png)
 
 ## Step 4: Physical Experiment Setup
 
