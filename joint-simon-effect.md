@@ -90,6 +90,17 @@ In order to check if the network connection works, open a terminal and type:
 ping ROBOT_IP
 </pre>
 
+You should see something like this:
+
+<pre>
+ping 192.168.1.199
+PING 192.168.1.199 (192.168.1.199) 56(84) bytes of data.
+64 bytes from 192.168.1.199: icmp_seq=1 ttl=64 time=0.402 ms
+64 bytes from 192.168.1.199: icmp_seq=2 ttl=64 time=0.328 ms
+64 bytes from 192.168.1.199: icmp_seq=3 ttl=64 time=0.407 ms
+...
+</pre>
+
 <img align="left" hspace="20" src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/pepper_cable.jpg" width=300px>
 <img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/pepper_power.jpg" width=300px>
 
@@ -121,16 +132,10 @@ Before proceeding installing the experiment software environment, please execute
 to get your system up-to-date.
 
 <pre>
-sudo apt update && sudo apt upgrade
-</pre>
-
-Enable additional repositories.
-
-<pre>
+sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install software-properties-common
 sudo apt-add-repository universe
-sudo apt-get update
-sudo apt upgrade
+sudo apt-get update && sudo apt-get upgrade
 </pre>
 
 When the update process is finished, please proceed. Note: since almost everything in this experiment
