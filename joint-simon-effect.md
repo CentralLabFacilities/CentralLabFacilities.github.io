@@ -276,10 +276,16 @@ next to the build job named:
 
 ![jenkins_trigger](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/trigger_job.png)
 
-The Jenkins will redirect you to another page that displays a dialog "ageLimit ...". Press the build button.
-In general, to get back to the overview page, simply click the top left Jenkins icon. 
+The Jenkins will redirect you to another page that displays a dialog "ageLimit ...". Press the _blue_ build button.
 
-Our CITK toolchain will now install all required software components for you _automagically_. 
+![jenkins_age_limit](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/age_limit.png)
+
+In general, to get back to the overview page, simply click the top left Jenkins icon. Our CITK toolchain will now install all required software components for you _automagically_. 
+
+You can watch the status, and what is currently being installed, on left side of the Jenkins in the so called
+Build Queue
+
+![jenkins_queue](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/build_queue.png)
 
 When it's done (can take up to 10 minutes), all except for two, jobs in your Jenkins instance should turn from grey
 (haven't been built yet) to blue (successfully build & installed). 
