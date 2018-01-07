@@ -285,7 +285,7 @@ In general, to get back to the overview page, simply click the top left Jenkins 
 You can watch the status, and what is currently being installed, on left side of the Jenkins in the so called
 Build Queue
 
-<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/build_queue.png" width=350px>
+<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/build_queue.png" width=250px>
 
 When it's done (can take up to 10 minutes), all except for two, jobs in your Jenkins instance should turn from _grey_
 &mdash; haven't been built yet &mdash; to _blue_ &mdash; successfully build & installed. 
