@@ -489,12 +489,12 @@ effect with an anthropomorphic robot and all further questions were answered.
 At the end of each trial, the last slide asks you to download the experiment data as a .csv file with the **unique id** 
 of the participant as **file name**.
 
-<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/download.png" width=300px>
+<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/download.png" width=350px>
 
 Please store this file on your computer and regularly **backup your data**! Note the unique id in your
 documentation table (see above)!
 
-<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/file_download.png" width=300px>
+<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/file_download.png" width=350px>
 
 If you ever forget to store the data or refresh the browser before downloading, you can still download the file 
 at the beginning of the next trail.
