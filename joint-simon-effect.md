@@ -422,7 +422,7 @@ window will return to its initial state (new subject).
 The build job will keep running until you **explicitly** stop it using the "[x]" button next to the running job 
 (in the Build Queue), you shut down the Jenkins, you shut down the laptop, or after a maximum of **24 hrs**. 
 
-<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/experiment_runs.png" width=250px>
+<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/experiment_runs.png" width=300px>
 
 When you're done for the day, you **may** shut down everything. When you continue the next day, you just need to: 
 
