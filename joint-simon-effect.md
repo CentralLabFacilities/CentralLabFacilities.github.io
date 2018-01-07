@@ -397,7 +397,7 @@ Next, trigger the job ...
 
 ... and enter the IP and port (default: 9559) of the robot in the small popup window and confirm the dialog.
 
-<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/run_experiment_config.png" width=300px>
+<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/run_experiment_config.png">
 
 Now, in another browser window or a new browser tab enter the following address into the address bar, this will load
 the actual experiment implemented by utilizing jsPsych [5]: 
