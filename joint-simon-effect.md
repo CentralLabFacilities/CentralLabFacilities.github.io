@@ -353,9 +353,7 @@ During the calibration procedure there are four postures recorded:
 - _keypress_.
 
 The posture recording is, again, triggered via a so called _build job_ (in the Jenkins browser window) Please, 
-switch to the Jenkins in your browser window:
- 
-https://localhost:8080/?auto_refresh=true
+switch to the Jenkins in your browser window: https://localhost:8080/?auto_refresh=true
 
 Log in (if not logged in) and trigger the job below by pressing the stopwatch icon next to the job:
  
