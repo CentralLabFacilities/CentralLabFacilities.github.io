@@ -278,7 +278,7 @@ next to the build job named:
 
 The Jenkins will redirect you to another page that displays a dialog "ageLimit ...". Press the _blue_ build button.
 
-![jenkins_age_limit](https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/age_limit.png)
+<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/age_limit.png" width=250px>
 
 In general, to get back to the overview page, simply click the top left Jenkins icon. Our CITK toolchain will now install all required software components for you _automagically_. 
 
