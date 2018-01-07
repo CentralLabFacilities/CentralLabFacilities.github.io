@@ -361,12 +361,12 @@ Log in (if not logged in) and trigger the job below by pressing the stopwatch ic
  
 **"runnable-remotelab-jsp-nao-calibration-master-runnable-toolkit-remotelab-nightly"**
 
-<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/calibration_job.png" width=400px>
+<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/calibration_job.png">
 
 Wait a few seconds until a new program/application pops up and follow the instructions that appear in the application 
 window. First enter the IP (of your robot!), the port is 9559.
 
-<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/calibration_ip.png">
+<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/calibration_ip.png" width=250px>
 
 You will be asked if you want to record postures for the left or right arm and then to move the easily moveable 
 arms (not stiffened) to the positions as depicted in the application according to your setup.
