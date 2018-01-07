@@ -385,7 +385,10 @@ Great, you are done! Now you can basically run the experiment.
 It is assumed that you either just calibrated the robot or, if you resume the experiment from day to day,
 set up the NAO exactly like the last time you calibrated, remember: always use, e.g., tape to mark the robots position.
 
-Switch to the Jenkins in your browser (you need to be logged in) https://localhost:8080/?auto_refresh=true.
+Switch to the Jenkins in your browser (you need to be logged in):
+
+https://localhost:8080/?auto_refresh=true.
+
 Next, trigger the job ...
 
 **"runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly**"
@@ -397,12 +400,16 @@ Next, trigger the job ...
 Now, in another browser window or a new browser tab enter the following address into the address bar, this will load
 the actual experiment implemented by utilizing jsPsych [5]: 
 
-**http://localhost:5000/**
+http://localhost:5000/
 
 You should see the first experiment setup slide! You don't need to enter anything on this slide, click _submit answers_.
 
+<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/study_init_screen.png" width=500px>
+
 On the next slide, you have to choose on which side the robot is kneeling. Choose right or left and &mdash; 
 congratulations &mdash; the setup is done! 
+
+<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/left_right.png" width=500px>
 
 The robot should stiffen and move the correct arm towards the keyboard. This should be done before the subject enters 
 the room or sees the robot.
@@ -414,6 +421,8 @@ window will return to its initial state (new subject).
 
 The build job will keep running until you **explicitly** stop it using the "[x]" button next to the running job 
 (in the Build Queue), you shut down the Jenkins, you shut down the laptop, or after a maximum of **24 hrs**. 
+
+<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/build_queue.png" width=500px>
 
 When you're done for the day, you **may** shut down everything. When you continue the next day, you just need to: 
 
