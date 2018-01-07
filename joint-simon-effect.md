@@ -405,7 +405,7 @@ You should see the first experiment setup slide! You don't need to enter anythin
 On the next slide, you have to choose on which side the robot is kneeling. Choose right or left and &mdash; 
 congratulations &mdash; the setup is done! 
 
-<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/left_right.png" width=250px>
+<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/left_right.png" width=300px>
 
 The robot should stiffen and move the correct arm towards the keyboard. This should be done before the subject enters 
 the room or sees the robot.
