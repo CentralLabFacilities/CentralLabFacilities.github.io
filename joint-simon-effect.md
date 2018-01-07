@@ -385,9 +385,7 @@ Great, you are done! Now you can basically run the experiment.
 It is assumed that you either just calibrated the robot or, if you resume the experiment from day to day,
 set up the NAO exactly like the last time you calibrated, remember: always use, e.g., tape to mark the robots position.
 
-Switch to the Jenkins in your browser (you need to be logged in):
-
-https://localhost:8080/?auto_refresh=true.
+Switch to the Jenkins in your browser (you need to be logged in): https://localhost:8080/?auto_refresh=true.
 
 Next, trigger the job ...
 
@@ -400,9 +398,7 @@ Next, trigger the job ...
 <img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/run_experiment_config.png">
 
 Now, in another browser window or a new browser tab enter the following address into the address bar, this will load
-the actual experiment implemented by utilizing jsPsych [5]: 
-
-http://localhost:5000/
+the actual experiment implemented by utilizing jsPsych [5]: http://localhost:5000/
 
 You should see the first experiment setup slide! You don't need to enter anything on this slide, click _submit answers_.
 
