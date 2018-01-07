@@ -409,7 +409,7 @@ You should see the first experiment setup slide! You don't need to enter anythin
 On the next slide, you have to choose on which side the robot is kneeling. Choose right or left and &mdash; 
 congratulations &mdash; the setup is done! 
 
-<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/left_right.png" width=500px>
+<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/left_right.png" width=300px>
 
 The robot should stiffen and move the correct arm towards the keyboard. This should be done before the subject enters 
 the room or sees the robot.
@@ -422,7 +422,7 @@ window will return to its initial state (new subject).
 The build job will keep running until you **explicitly** stop it using the "[x]" button next to the running job 
 (in the Build Queue), you shut down the Jenkins, you shut down the laptop, or after a maximum of **24 hrs**. 
 
-<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/build_queue.png" width=500px>
+<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/experiment_runs.png" width=200px>
 
 When you're done for the day, you **may** shut down everything. When you continue the next day, you just need to: 
 
