@@ -364,7 +364,7 @@ Log in (if not logged in) and trigger the job below by pressing the stopwatch ic
 <img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/calibration_job.png">
 
 Wait a few seconds until a new program/application pops up and follow the instructions that appear in the application 
-window. First enter the IP, the port is 9559.
+window. First enter the IP (of your robot!), the port is 9559.
 
 <img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/calibration_ip.png">
 
@@ -376,7 +376,7 @@ Please execute the calibration for the left and right arm, i.e., trigger the job
 - 1st time for left arm
 - 2nd time for right arm
 
-<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/calibration_procedure.png" width=300px>
+<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/calibration_procedure.png" width=500px>
 
 Great, you are done! Now you can basically run the experiment.
 
@@ -388,7 +388,9 @@ set up the NAO exactly like the last time you calibrated, remember: always use, 
 Switch to the Jenkins in your browser (you need to be logged in) https://localhost:8080/?auto_refresh=true.
 Next, trigger the job ...
 
-**"runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly**" (stopwatch icon) 
+**"runnable-remotelab-nao-physical-demo-master-runnable-toolkit-remotelab-nightly**"
+
+<img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/run_experiment.png">
 
 ... and enter the IP and port (default: 9559) of the robot in the small popup window and confirm the dialog.
 
