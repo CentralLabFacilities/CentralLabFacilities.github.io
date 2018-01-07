@@ -495,9 +495,6 @@ Please store this file on your computer and regularly **backup your data**! Note
 documentation table (see above)!
 
 <img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/file_download.png" width=350px>
-
-If you ever forget to store the data or refresh the browser before downloading, you can still download the file 
-at the beginning of the next trail.
  
 ## Literature
 
