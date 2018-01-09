@@ -10,7 +10,8 @@
 5. Subjects
 6. Executing the Experiment
 7. Results
-8. Literature
+8. Evaluation Method
+9. Literature
 
 ## Introduction
 
@@ -495,6 +496,11 @@ Please store this file on your computer and regularly **backup your data**! Note
 documentation table (see above)!
 
 <img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/file_download.png" width=350px>
+
+## Evaluation Method
+
+TODO: Describe what script to download, how to merge the data, what command line to execute and how
+the the expected result looks like, e.g., a plot.
  
 ## Literature
 
