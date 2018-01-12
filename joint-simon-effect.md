@@ -476,14 +476,13 @@ as if it was just another participant, but without further description or detail
 study instructions would be displayed on the screen when the experiment starts. As described in the previous step, the study 
 was initiated (left, right) by the operator during the first setup slides. This resulted in the robot's motors being turned 
 on and stiffened. The robot's hand next to the participant moved to the initial position over to the space bar to introduce 
-the robot's ability to move to the participant. Participants were asked to follow the instructions on the screen and to contact the 
-experimenter in case they had questions or if the experiment was done.
+the robot's ability to move to the participant. Participants were asked to follow the instructions on the screen and to contact the experimenter in case they had questions or if the experiment was done.
 
-After doing the interactive task, participants were told to contact the experimenter next door and to complete the survey. 
-To do so, participants were seated next door and completed an online survey.
+After doing the interactive task, participants were told to contact the experimenter next door and to complete the survey (see: https://piratenpad.de/p/F8PMZZSr). 
+To do so, participants were seated next door.
 
 After the experiment, participants were informed (debriefed) that the aim of the study was to test the joint simon 
-effect with an anthropomorphic robot and all further questions were answered.
+effect with an anthropomorphic robot and all further questions were answered. Participation was reimbursed with 8€.
 
 ## Results
 
