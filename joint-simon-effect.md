@@ -498,9 +498,24 @@ documentation table (see above)!
 
 ## Evaluation Method
 
-TODO when final results come in: Describe what script to download, how to merge the data, what command line to execute and how
-the the expected result looks like, e.g., a plot.
+As soon as you got all the files you needed in the format <id>.csv (e.g. 4b56-762b.csv) you have to bring them into the same format (same row-column layout in every file) and merge them into one file. 
  
+ 1. Have all the .csv files in one seperate directory (e.g. ~/experiment-data/)
+ 2. Download (right click -> save as) the scripts reorder.py and save it in the same directory as above: https://raw.githubusercontent.com/CentralLabFacilities/CentralLabFacilities.github.io/master/scripts/reorder.py
+ 3. Download the script nao_jse_reader.py: https://raw.githubusercontent.com/CentralLabFacilities/CentralLabFacilities.github.io/master/scripts/nao_jse_reader.py
+ 4. Open a terminal
+ 5. Navigate to the above directory. (e.g. cd ~/experiment-data/)
+ 6. Type <pre>mkdir merged</pre> and press Return.
+ 7. Type (copy+paste) the following command to reorder all the files: <pre> for filename in $(ls *.csv); do python2 reorder.py -f $filename ; done </pre>
+ 8. Type the following command to preserve the head of the .csv file for later: <pre> head -1 ord_<any_id>.csv > merged/merged.csv
+ 9. Finally, to merge all files into one type: <pre> for filename in $(ls ord_*.csv); do sed 1d $filename >> merged/merged.csv; done</pre>
+ 10. Now you got all data in one file - Congratulations!
+ 11. To create a .csv with basic statistics type: <pre> python2 nao_jse_reader.py -f merged/merged.csv </pre>
+ 12. It will create the results.csv where you can see the mean/var/stdev for every ID and at the bottom the mean for the the two groups *compatible* and *incompatible*
+ 13. Now you can do an in-depth analysis with e.g. R or SPSS!
+ 
+ <img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/resultscsv.png" width=500px>
+
 ## Literature
 
 - [1] https://www.ncbi.nlm.nih.gov/pubmed/22866762
