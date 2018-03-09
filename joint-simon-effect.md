@@ -498,7 +498,7 @@ documentation table (see above)!
 
 ## Evaluation Method
 
-TODO: Describe what script to download, how to merge the data, what command line to execute and how
+TODO when final results come in: Describe what script to download, how to merge the data, what command line to execute and how
 the the expected result looks like, e.g., a plot.
  
 ## Literature
