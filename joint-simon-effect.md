@@ -505,8 +505,8 @@ As soon as you got all the files you needed in the format <id>.csv (e.g. 4b56-76
  3. Download the script nao_jse_reader.py: https://raw.githubusercontent.com/CentralLabFacilities/CentralLabFacilities.github.io/master/scripts/nao_jse_reader.py
  4. Open a terminal
  5. Navigate to the above directory. (e.g. cd ~/experiment-data/)
- 6. Type <pre>mkdir merged</pre> and press Return.
- 7. Type (copy+paste) the following command to reorder all the files: <pre> for filename in $(ls *.csv); do python2 reorder.py -f $filename ; done </pre>
+ 6. Type (copy+paste into Terminal, then press Return) <pre>mkdir merged</pre>.
+ 7. Type (the following command to reorder all the files: <pre> for filename in $(ls *.csv); do python2 reorder.py -f $filename ; done </pre>
  8. Type the following command to preserve the head of the .csv file for later: <pre> head -1 ord_<any_id>.csv > merged/merged.csv
  9. Finally, to merge all files into one type: <pre> for filename in $(ls ord_*.csv); do sed 1d $filename >> merged/merged.csv; done</pre>
  10. Now you got all data in one file - Congratulations!
@@ -514,7 +514,7 @@ As soon as you got all the files you needed in the format <id>.csv (e.g. 4b56-76
  12. It will create the results.csv where you can see the mean/var/stdev for every ID and at the bottom the mean for the the two groups *compatible* and *incompatible*
  13. Now you can do an in-depth analysis with e.g. R or SPSS!
  
- <img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/resultscsv.png" width=500px>
+ <img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/resultscsv.png" width=1000px>
 
 ## Literature
 
