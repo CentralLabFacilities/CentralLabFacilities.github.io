@@ -322,7 +322,7 @@ The viewing distance is taken from the original Stenzel paper (approx. 80cm). Th
 a table or chair. The barycenter of the robot is approximately at elbow height of a sitting subject.
 
 The participant and the robot each have their own keyboard of _identical_ type. The keyboards are directly adjacent 
-(touching) and on the _same level_. 
+(touching) and on the _same level_. The keyboard of the Nao must **not** be connected to the keyboard. So when switching sides, you have to change the keyboard being connected. Otherwise the results of the Nao will be recorded.
 
 The posture of the robot's hand above the keyboard is predefined and will be individually set up using a calibration program 
 that will be introduced in the next step. Calibration is necessary because there might be differences in the positioning of the 
@@ -376,6 +376,8 @@ Please execute the calibration for the left and right arm, i.e., trigger the job
 - 2nd time for right arm
 
 <img src="https://github.com/CentralLabFacilities/CentralLabFacilities.github.io/blob/master/images/calibration_procedure.png" width=350px>
+
+The participants should get the impression that the robot is actually **pressing** and **depressing** the space bar, i.e. actively participating in the experiment even though it's keyboard is not connected (see above). 
 
 Great, you are done! Now you can basically run the experiment.
 
