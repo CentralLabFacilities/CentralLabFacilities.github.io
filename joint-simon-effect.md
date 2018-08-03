@@ -156,17 +156,17 @@ command below. Important: in the next steps, make sure you always copy the **com
 sudo apt-get install openjdk-8-jdk curl python2.7 python2.7-dev python-setuptools git subversion maven build-essential build-essential cmake
 </pre>
 
-Download the jenkins-jse.tar.gz. In the remainder of this tutorial we will work with ~/citk/ as your installation $prefix.
+Download the jenkins-joint-simon-effect.tar.gz. In the remainder of this tutorial we will work with ~/citk/ as your installation $prefix.
 
 <pre>
 mkdir -p $HOME/citk/ && cd $HOME/citk/
-wget --no-check-certificate https://ci.toolkit.cit-ec.de/job/jenkins-distribution/lastStableBuild/artifact/jenkins.tar.gz -O jenkins-jse.tar.gz
+wget https://www.techfak.de/clf-distro/archive/jenkins-joint-simon-effect.tar.gz -O jenkins-joint-simon-effect.tar.gz
 </pre>
 
 Extract the archive.
 
 <pre>
-tar -xzvf jenkins-jse.tar.gz
+tar -xzvf jenkins-joint-simon-effect.tar.gz
 cd jenkins
 </pre>
 
